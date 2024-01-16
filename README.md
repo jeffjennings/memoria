@@ -1,2 +1,2 @@
-# py_repo
-A generic template for a Python repository
+# memoria
+A simple GUI to replicate flashcards for memorizing Italian words, conjugation/declension and phrases. Vocabulary and grammar entries are added on a per chapter basis as I work through the Italian textbooks and workbooks of _New Italian Espresso_ and _Nuovo Espresso_, as well as the grammar books _Italian Grammar in Practice_, _English Grammar for Students of Italian_, and _Pocket Italian Grammar_.
