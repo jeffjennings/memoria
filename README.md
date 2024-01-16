@@ -4,4 +4,4 @@ A simple GUI to replicate flashcards for memorizing Italian vocabulary, grammar 
 The code produces a GUI with a grid of flashcards in either Italian or English entries that belong to one or more specified (or random) chapters in the above books; clicking on the entry shows its English/Italian counterpart, or in the case of grammar the relevant forms.
 
 A great Italian-English dictionary is [WordReference](https://www.wordreference.com/iten/). 
-And a great grammar reference for verb conjugation across all tenses is [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/).
+And a great grammar reference for verb conjugation is [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/).
