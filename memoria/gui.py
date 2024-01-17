@@ -61,7 +61,11 @@ for ii in range(5):
         flashcard = tk.Button(
             master=root,
             text=f"\n {word}",
-            command=lambda idx=counter: translate(cards[idx]),
+            command=lambda idx=counter: update_card(cards[idx], 
+                                                    list(source_dict)[idx], 
+                                                    source_dict, 
+                                                    reference_type,
+                                                    ),
             anchor='n', # text alignment
             font=text_font,
             bg='#3393FF',
