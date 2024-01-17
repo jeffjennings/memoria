@@ -7,23 +7,67 @@ from memoria.helper_funcs import update_card
 source_dict = nie_c1_v # temporary
 book = chapter = card_type = 0 # temporary
 
-books = ["New Italian Espresso: A0 - A1.5", 
-         "New Italian Espresso: A1.5 - B1",
-         "Nuovo Espresso: B2",
-         "Nuovo Espresso: C1",
-         "Nuovo Espresso: C2",
-         "Italian Grammar in Practice",
-         "English Grammar for Students of Italian",
-         "Pocket Italian Grammar",
-         ]
+def selection_gui():
+    books = ["New Italian Espresso: A0 - A1.5", 
+            "New Italian Espresso: A1.5 - B1",
+            "Nuovo Espresso: B2",
+            "Nuovo Espresso: C1",
+            "Nuovo Espresso: C2",
+            "Italian Grammar in Practice",
+            "English Grammar for Students of Italian",
+            "Pocket Italian Grammar",
+            ]
+    
+    types = ["word", "grammar", "phrase"]
 
-root = Tk()
-root.geometry("2385x1600")
-root.configure(bg='#494949')
-root.title("Flashcards")
+    root = Tk()
+    root.geometry("850x250")
+    root.title("Book, chapter and flashcard type selection")
+    base_font = font.Font(family='Lato', size=16, weight='bold')
 
-# button text
-text_font = font.Font(family='Lato', size=22, weight='bold')
+    # book to draw flashcards from
+    chosen_book = tk.StringVar(root)
+    chosen_book.set(books[0])
+
+    book_dropdown = ttk.Combobox(root, 
+                                state='readonly', 
+                                textvariable=chosen_book, 
+                                values=books,
+                                width=40,
+                                font=base_font,
+                                )
+    book_lab = tk.Label(root, text="Book:", fg='#581845', font=base_font)
+    book_dropdown.grid(row=0, column=1, padx=10, pady=10)
+    book_lab.grid(row=0, column=0, padx=10, pady=10)
+
+    # chapter of book to draw flashcards from
+    chosen_chap = tk.StringVar(root)
+    chosen_chap.set(1)
+
+    chap_entry = tk.Entry(root, 
+                        textvariable=chosen_chap,
+                        width=40,
+                        font=base_font,
+                        )
+    chap_lab = tk.Label(root, text="Chapters (comma-separated):", fg='#C70039', font=base_font)
+    chap_entry.grid(row=1, column=1, padx=10, pady=10)
+    chap_lab.grid(row=1, column=0, padx=10, pady=10)
+
+    # flashcard type (word, grammar, phrase)
+    chosen_type = tk.StringVar(root)
+    chosen_type.set(types[0])
+
+    type_dropdown = ttk.Combobox(root, 
+                                state='readonly', 
+                                textvariable=chosen_type,
+                                values=types,
+                                width=40,
+                                font=base_font,
+                                )
+    type_lab = tk.Label(root, text="Entry type:", fg='#FF5733', font=base_font)
+    type_dropdown.grid(row=2, column=1, padx=10, pady=10)
+    type_lab.grid(row=2, column=0, padx=10, pady=10)
+
 
 chosen_book = tk.StringVar(root)
 chosen_book.set(books[0])
