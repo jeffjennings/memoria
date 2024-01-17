@@ -25,6 +25,13 @@ root.title("Flashcards")
 # button text
 text_font = font.Font(family='Lato', size=22, weight='bold')
 
+chosen_book = tk.StringVar(root)
+chosen_book.set(books[0])
+
+book_dropdown = ttk.Combobox(root, state='readonly', textvariable=chosen_book, values=books)
+lab = tk.Label(root, text="Book:", fg='blue')
+book_dropdown.grid(row=0, column=4)
+lab.grid(row=0, column=4)
 
 def make_flashcards(book, chapter, card_type):
     cards = []
