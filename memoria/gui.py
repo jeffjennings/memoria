@@ -1,8 +1,23 @@
 import tkinter as tk
-from tkinter import font
-import webbrowser
+from tkinter import font, Tk, ttk
 
-root = tk.Tk()
+from memoria.dictionaries import * 
+from memoria.helper_funcs import update_card
+
+source_dict = nie_c1_v # temporary
+book = chapter = card_type = 0 # temporary
+
+books = ["New Italian Espresso: A0 - A1.5", 
+         "New Italian Espresso: A1.5 - B1",
+         "Nuovo Espresso: B2",
+         "Nuovo Espresso: C1",
+         "Nuovo Espresso: C2",
+         "Italian Grammar in Practice",
+         "English Grammar for Students of Italian",
+         "Pocket Italian Grammar",
+         ]
+
+root = Tk()
 root.geometry("2385x1600")
 root.configure(bg='#494949')
 root.title(f"Chapter(s) 1")
