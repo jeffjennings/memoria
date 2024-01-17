@@ -7,7 +7,14 @@ root.geometry("2385x1600")
 root.configure(bg='#494949')
 root.title(f"Chapter(s) 1")
 
-text_font = font.Font(family='Lato', size=36, weight='bold')
+# button text
+text_font = font.Font(family='Lato', size=22, weight='bold')
+
+def translate(word, source_dict):
+    """Get the translation of 'word' from the dictionary 'source_dict'"""
+    translation = source_dict[word]
+
+    return translation
 
 
 def look_up_word(word, reference_type):
@@ -21,6 +28,19 @@ def look_up_word(word, reference_type):
 
     else:
         pass
+
+
+def update_card(card, word, source_dict, reference_type):
+    """For a button flashcard, update the card the word's translation on first click, or open a hyperlink on second click"""
+    if card['underline'] == 0:
+        look_up_word(word, reference_type)
+    else:
+        translation = translate(word, source_dict)
+
+        new_text = f"{card['text']}\n\n{translation}"
+        # update button color once it's clicked
+        card.config(text=new_text, bg='#900C3F', fg='#EEEEEE', underline=0)
+        
 
 
 cards = []
