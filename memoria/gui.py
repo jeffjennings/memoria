@@ -7,6 +7,37 @@ root.geometry("2385x1600")
 root.configure(bg='#494949')
 root.title(f"Chapter(s) 1")
 
+reference_type = 'word'
+source_dict = {
+    'pillow':'cuscino',
+    'blanket':'coperta',
+    'she is':'è',
+    'bed':'letto',
+    'book':'libro',
+    'window':'finestra',
+    'door':'porta',
+    'chair':'sedia',
+    'table':'tavolo',
+    'zpillow':'cuscino',
+    'zblanket':'coperta',
+    'zshe is':'è',
+    'zbed':'letto',
+    'zbook':'libro',
+    'zwindow':'finestra',
+    'zdoor':'porta',
+    'zchair':'sedia',
+    'ztable':'tavolo',
+    'ypillow':'cuscino',
+    'yblanket':'coperta',
+    'yshe is':'è',
+    'ybed':'letto',
+    'ybook':'libro',
+    'ywindow':'finestra',
+    'ydoor':'porta',
+    'ychair':'sedia',
+    'ytable':'tavolo',        
+}
+
 # button text
 text_font = font.Font(family='Lato', size=22, weight='bold')
 
