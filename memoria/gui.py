@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import font
+import webbrowser
 
 root = tk.Tk()
 root.geometry("2400x1600")
@@ -8,9 +9,19 @@ root.title(f"Chapter(s) 1")
 
 text_font = font.Font(family='Lato', size=36, weight='bold')
 
-def translate(card):
-    new_text = card['text'] + '\n\ntest'
-    card.config(text=new_text, bg='#900C3F', fg='#EEEEEE')
+
+def look_up_word(word, reference_type):
+    if reference_type in ['define', 'conjugate']:
+        if reference_type == 'define':
+            link = f"https://www.wordreference.com/iten/{word}"
+        else: 
+            link = f"https://sapere.virgilio.it/parole/coniuga-verbi/{word}"
+
+        webbrowser.open(link, new=2)
+
+    else:
+        pass
+
 
 cards = []
 counter = 0 
