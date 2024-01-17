@@ -85,6 +85,13 @@ def selection_gui():
     # return root
     root.mainloop()
 
+def flashcard_gui(book, chapter, card_type):
+    root = tk.Toplevel()
+    root.geometry("2385x1600")
+    root.configure(bg='#494949')
+    root.title("Flashcards")
+    base_font = font.Font(family='Lato', size=22, weight='bold')
+
     cards = []
     counter = 0 
 
@@ -92,8 +99,8 @@ def selection_gui():
 
     for ii in range(nrow):
         # vary button size with window size
-        # root.columnconfigure(ii, weight=1, minsize=150)
-        # root.rowconfigure(ii, weight=1, minsize=100)
+        root.columnconfigure(ii, weight=1, minsize=150)
+        root.rowconfigure(ii, weight=1, minsize=100)
 
         for jj in range(ncol):
             try:
@@ -109,13 +116,11 @@ def selection_gui():
                                                         source_dict, 
                                                         ),
                 anchor='n', # text alignment
-                font=text_font,
+                font=base_font,
                 bg='#3393FF',
                 fg="#494949", # text color
                 activebackground="#38C5E8",
                 activeforeground="#494949", # text color when moused over
-                width=20, # fix button width
-                height=6,
             )
             
             flashcard.grid(row=ii, column=jj, sticky='nsew', padx=10, pady=10)
@@ -124,6 +129,6 @@ def selection_gui():
 
             counter += 1
 
-make_flashcards(book, chapter, card_type)
-
-root.mainloop()
+selection_gui()
+# root = selection_gui()
+# root.mainloop()
