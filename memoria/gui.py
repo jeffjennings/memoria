@@ -3,7 +3,7 @@ from tkinter import font
 import webbrowser
 
 root = tk.Tk()
-root.geometry("2400x1600")
+root.geometry("2385x1600")
 root.configure(bg='#494949')
 root.title(f"Chapter(s) 1")
 
@@ -26,12 +26,17 @@ def look_up_word(word, reference_type):
 cards = []
 counter = 0 
 
-for ii in range(3):
+# create 5x5 grid of flashcards
+for ii in range(5):
+    # vary button size with window size
     root.columnconfigure(ii, weight=1, minsize=150)
     root.rowconfigure(ii, weight=1, minsize=100)
 
-    for jj in range(3):
-        word = 'blah'
+    for jj in range(5):
+        try:
+            word = list(source_dict)[counter]
+        except IndexError:
+            break
 
         flashcard = tk.Button(
             master=root,
@@ -43,6 +48,8 @@ for ii in range(3):
             fg="#494949", # text color
             activebackground="#38C5E8",
             activeforeground="#494949", # text color when moused over
+            width=16, # fix button width
+            height=6,
         )
         
         flashcard.grid(row=ii, column=jj, sticky='nsew', padx=5, pady=5)
