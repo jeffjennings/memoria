@@ -68,16 +68,23 @@ def selection_gui():
     type_dropdown.grid(row=2, column=1, padx=10, pady=10)
     type_lab.grid(row=2, column=0, padx=10, pady=10)
 
+    make_button = tk.Button(
+        root,
+        text="Generate flashcards",
+        command=flashcard_gui(chosen_book.get(), chosen_type.get(), [int(string) for string in chosen_chap.get().split(',')]),
+        font=base_font,
+        bg='#FFC300',
+        fg="#303030", # text color
+        activebackground="#303030",
+        activeforeground="#FFC300", # text color when moused over    
+        width=40, # fix button width
+        height=2,
+    )
+    make_button.grid(row=3, column=1, padx=10, pady=10)
 
-chosen_book = tk.StringVar(root)
-chosen_book.set(books[0])
+    # return root
+    root.mainloop()
 
-book_dropdown = ttk.Combobox(root, state='readonly', textvariable=chosen_book, values=books)
-lab = tk.Label(root, text="Book:", fg='blue')
-book_dropdown.grid(row=0, column=4)
-lab.grid(row=0, column=4)
-
-def make_flashcards(book, chapter, card_type):
     cards = []
     counter = 0 
 
