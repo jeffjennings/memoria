@@ -1,5 +1,7 @@
 import webbrowser
 
+colors = ['#C70039', '#FF5733', '#17BF14', '#FFC300']
+
 def translate(entry, source_dict):
     """Get the translation of 'entry' (either English to Italian or vice versa) 
     from the dictionary 'source_dict'"""
@@ -7,7 +9,7 @@ def translate(entry, source_dict):
     return source_dict[entry]
 
 
-def look_up_entry(entry, source_dict, reference_type, entry_language='italian'):
+def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
     """Depending on 'reference_type', look up online the definition of an Italian 
     word or phrase 'entry', its conjugation, or show the Italian form (that we 
     provide) on google translate to hear it spoken"""
@@ -22,8 +24,8 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='italian'):
         # for web address, must replace whitespace in 'entry'
         entry_no_spaces = entry.replace(" ", "%20")
 
-        if entry_language == 'english':
-            # don't want to call google translate on an english word/phrase, 
+        if entry_language == 'English':
+            # don't want to call google translate on an English word/phrase, 
             # as its translation may differ from our stored one
             entry_no_spaces = translate(entry_no_spaces, source_dict)
             
@@ -32,13 +34,13 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='italian'):
     webbrowser.open(link, new=2)
 
 
-def update_card(entry, source_dict, card, entry_language='italian'):
+def update_card(card, entry, source_dict, entry_language='English'):
     """For a button flashcard, update the card with the translation of 
     'entry' on first click; open a hyperlink on second click"""
 
     translation = translate(entry, source_dict)
 
-    if entry_language == 'english':
+    if entry_language == 'English':
         en_entry = entry
         it_entry = translation
     else:
@@ -53,10 +55,10 @@ def update_card(entry, source_dict, card, entry_language='italian'):
         else:
             reference_type = 'define'
 
-        look_up_entry(it_entry, source_dict, reference_type, entry_language='italian')
+        look_up_entry(it_entry, source_dict, reference_type, entry_language='Italian')
 
     else:
         new_text = f"{card['text']}\n\n{translation}"
         # update button color once it's clicked
-        card.config(text=new_text, bg='#900C3F', fg='#EEEEEE', underline=0)
+        card.config(text=new_text, fg=colors[2], underline=0)
         
