@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import font, Tk, ttk
 
+from memoria.vocab import * 
 from memoria.dictionaries import * 
 from memoria.helper_funcs import update_card
 
