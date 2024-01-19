@@ -1,10 +1,11 @@
 import webbrowser
 
-def translate(word, source_dict):
-    """Get the translation of 'word' from the dictionary 'source_dict'"""
-    translation = source_dict[word]
+def translate(entry, source_dict):
+    """Get the translation of 'entry' (either English to Italian or vice versa) 
+    from the dictionary 'source_dict'"""
 
-    return translation
+    return source_dict[entry]
+
 
 def look_up_word(word, reference_type):
     if reference_type in ['define', 'conjugate']:
