@@ -95,7 +95,9 @@ def selection_gui(books, card_types, languages):
     # return root
     root.mainloop()
 
-def flashcard_gui(book, card_type):
+
+def flashcard_gui(source_dict, entry_language):
+    """Create an interactive GUI displaying flashcards"""
     root = tk.Toplevel()
     base_font = font.Font(family='Lato', size=16, weight='bold')
     root.geometry("2400x2400")
@@ -113,7 +115,10 @@ def flashcard_gui(book, card_type):
 
         for jj in range(ncol):
             try:
-                word = list(source_dict)[counter]
+                if entry_language == 'English':
+                    entry = list(source_dict)[counter]
+                else:
+                    entry = list(source_dict.values())[counter]
             except IndexError:
                 break
 
