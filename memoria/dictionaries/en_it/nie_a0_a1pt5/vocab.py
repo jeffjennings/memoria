@@ -1,4 +1,5 @@
-verbs = {
+# New Italian Espresso
+vocab = {
     'to study':'studiare',
     'to want':'volere',
     'to work':'lavorare',
