@@ -124,10 +124,11 @@ def flashcard_gui(source_dict, entry_language):
 
             flashcard = tk.Button(
                 root,
-                text=f"\n {word}",
+                text=f"\n {entry}",
                 command=lambda idx=counter: update_card(cards[idx], 
                                                         list(source_dict)[idx], 
-                                                        source_dict, 
+                                                        source_dict,
+                                                        entry_language
                                                         ),
                 anchor='n', # text alignment
             )
@@ -142,6 +143,4 @@ def flashcard_gui(source_dict, entry_language):
 
             counter += 1
 
-selection_gui()
-# root = selection_gui()
-# root.mainloop()
+selection_gui(books, card_types, languages)
