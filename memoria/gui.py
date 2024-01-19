@@ -36,22 +36,19 @@ def selection_gui(books, card_types, languages):
     # book to draw flashcards from
     chosen_book = tk.StringVar(root, value=list(books)[0])
     
+    book_dropdown = tk.OptionMenu(root, 
+                                chosen_book, 
                                 *list(books),
                                 )
-    book_lab = tk.Label(root, text="Book:", fg='#C70039', font=base_font)
     book_dropdown.grid(row=0, column=1, padx=10, pady=10)
     book_lab.grid(row=0, column=0, padx=10, pady=10)
 
-    # flashcard type (vocab, grammar, phrase)
-    chosen_type = tk.StringVar(root)
-    chosen_type.set(types[0])
+    # flashcard type (vocab, grammar, phrases)
+    chosen_type = tk.StringVar(root, value=card_types[0])
 
-    type_dropdown = ttk.Combobox(root, 
-                                state='readonly', 
-                                textvariable=chosen_type,
-                                values=types,
-                                width=40,
-                                font=base_font,
+    type_dropdown = tk.OptionMenu(root, 
+                                chosen_type,
+                                *card_types,
                                 )
     # folder name for book dictionaries
     book_module = books[chosen_book.get()]
