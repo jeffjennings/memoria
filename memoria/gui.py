@@ -2,6 +2,8 @@ import sys
 import os
 import tkinter as tk
 from tkinter import font, Tk
+import random 
+# random.seed(47)
 
 from memoria.inputs import books, card_types, languages
 from memoria.helper_funcs import update_card, colors
@@ -107,7 +109,19 @@ def flashcard_gui(source_dict, entry_language):
     cards = []
     counter = 0 
 
-    nrow = ncol = 5
+    # get all dictionary entries
+    if entry_language == 'English':
+        all_entry = list(source_dict)
+    else:
+        all_entry = list(source_dict.values())
+    # randomize order (in-place)
+    random.shuffle(all_entry)
+
+    nrow = ncol = 5    
+
+    type_lab = tk.Label(root, text=f"Entries {counter} - {nrow * ncol - 1} of {len(all_entry)}", fg=colors[3], font=base_font)
+    type_lab.grid(row=9, column=9, padx=6, pady=2)   
+
     for ii in range(nrow):
         # vary button size with window size
         root.columnconfigure(ii, weight=1, minsize=150)
@@ -115,10 +129,7 @@ def flashcard_gui(source_dict, entry_language):
 
         for jj in range(ncol):
             try:
-                if entry_language == 'English':
-                    entry = list(source_dict)[counter]
-                else:
-                    entry = list(source_dict.values())[counter]
+                entry = all_entry[counter]
             except IndexError:
                 break
 
