@@ -50,6 +50,15 @@ def selection_gui(books, card_types, languages):
                                 chosen_type,
                                 *card_types,
                                 )
+
+    # flashcard language
+    chosen_language = tk.StringVar(root, value=languages[0])
+
+    type_dropdown = tk.OptionMenu(root, 
+                                chosen_language,
+                                *languages,
+                                )
+    type_dropdown.grid(row=2, column=1, padx=10, pady=10)    
     # folder name for book dictionaries
     book_module = books[chosen_book.get()]
     selection_button = tk.Button(
