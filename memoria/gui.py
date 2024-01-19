@@ -137,7 +137,7 @@ def flashcard_gui(source_dict, entry_language):
                 root,
                 text=f"\n {entry}",
                 command=lambda idx=counter: update_card(cards[idx], 
-                                                        list(source_dict)[idx], 
+                                                        all_entry[idx], 
                                                         source_dict,
                                                         entry_language
                                                         ),
