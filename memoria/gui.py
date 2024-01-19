@@ -22,21 +22,21 @@ def get_dictionary(book, card_type):
         import phrases
         return phrases.phrases
 
+
+def selection_gui(books, card_types, languages):
+    """Create a GUI with options to select a book from which to 
+    generate a given type of flaschards in a given language"""
     root = Tk()
-    root.geometry("850x250")
-    root.title("Book and flashcard type selection")
     base_font = font.Font(family='Lato', size=16, weight='bold')
+    # root.geometry("850x250")
+    root.geometry("2400x2400")
+    # root.configure(bg='#494949')
+    root.title("Book and flashcard type selection")
 
     # book to draw flashcards from
-    chosen_book = tk.StringVar(root)
-    chosen_book.set(books[0])
-
-    book_dropdown = ttk.Combobox(root, 
-                                state='readonly', 
-                                textvariable=chosen_book, 
-                                values=books,
-                                width=40,
-                                font=base_font,
+    chosen_book = tk.StringVar(root, value=list(books)[0])
+    
+                                *list(books),
                                 )
     book_lab = tk.Label(root, text="Book:", fg='#C70039', font=base_font)
     book_dropdown.grid(row=0, column=1, padx=10, pady=10)
@@ -53,10 +53,8 @@ def get_dictionary(book, card_type):
                                 width=40,
                                 font=base_font,
                                 )
-    type_lab = tk.Label(root, text="Entry type:", fg='#FF5733', font=base_font)
-    type_dropdown.grid(row=1, column=1, padx=10, pady=10)
-    type_lab.grid(row=1, column=0, padx=10, pady=10)
-
+    # folder name for book dictionaries
+    book_module = books[chosen_book.get()]
     selection_button = tk.Button(
         root,
         text="Generate flashcards",
