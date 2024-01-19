@@ -1,26 +1,26 @@
+import sys
+import os
 import tkinter as tk
-from tkinter import font, Tk, ttk
+from tkinter import font, Tk
 
-from memoria.vocab import * 
-from memoria.grammar import *
-from memoria.phrases import *
-from memoria.helper_funcs import update_card
+from memoria.inputs import books, card_types, languages
+from memoria.helper_funcs import update_card, colors
+import memoria
+memoria_path = os.path.dirname(memoria.__file__)
 
-source_dict = nie_c1_v # temporary
-book = chapter = card_type = 0 # temporary
+def get_dictionary(book, card_type):
+    """Load the selected dictionary"""
 
-def selection_gui():
-    books = ["New Italian Espresso: A0 - A1.5", 
-            "New Italian Espresso: A1.5 - B1",
-            "Nuovo Espresso: B2",
-            "Nuovo Espresso: C1",
-            "Nuovo Espresso: C2",
-            "Italian Grammar in Practice",
-            "English Grammar for Students of Italian",
-            "Pocket Italian Grammar",
-            ]
-    
-    types = ["word", "grammar", "phrase"]
+    sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it/{book}"))
+    if card_type == 'Vocabulary':
+        import vocab
+        return vocab.vocab
+    elif card_type == 'Grammar':
+        import grammar 
+        return grammar.grammar
+    else:
+        import phrases
+        return phrases.phrases
 
     root = Tk()
     root.geometry("850x250")

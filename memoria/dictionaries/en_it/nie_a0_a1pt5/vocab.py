@@ -11,4 +11,4 @@ vocab = {
     'to have':'avere',
     'to go':'andare',
     'to think':'pensare',
-}
+    }
