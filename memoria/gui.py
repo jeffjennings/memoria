@@ -61,16 +61,16 @@ def selection_gui(books, card_types, languages):
     type_dropdown.grid(row=2, column=1, padx=10, pady=10)    
     # folder name for book dictionaries
     book_module = books[chosen_book.get()]
+    # load relevant dictionary from book
+    source_dict = get_dictionary(book_module, chosen_type.get())
+    
     selection_button = tk.Button(
         root,
         text="Generate flashcards",
-        command=flashcard_gui(chosen_book.get(), chosen_type.get()),
+        command=flashcard_gui(source_dict, 
+                              chosen_language.get()),
         font=base_font,
-        bg='#FFC300',
-        fg="#303030", # text color
-        activebackground="#303030",
-        activeforeground="#FFC300", # text color when moused over    
-        width=40, # fix button width
+        width=30, # fix button width
         height=2,
     )
     selection_button.grid(row=2, column=1, padx=10, pady=10)
