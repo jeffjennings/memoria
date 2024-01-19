@@ -24,7 +24,7 @@ def selection_gui():
 
     root = Tk()
     root.geometry("850x250")
-    root.title("Book, chapter and flashcard type selection")
+    root.title("Book and flashcard type selection")
     base_font = font.Font(family='Lato', size=16, weight='bold')
 
     # book to draw flashcards from
@@ -38,24 +38,11 @@ def selection_gui():
                                 width=40,
                                 font=base_font,
                                 )
-    book_lab = tk.Label(root, text="Book:", fg='#581845', font=base_font)
+    book_lab = tk.Label(root, text="Book:", fg='#C70039', font=base_font)
     book_dropdown.grid(row=0, column=1, padx=10, pady=10)
     book_lab.grid(row=0, column=0, padx=10, pady=10)
 
-    # chapter of book to draw flashcards from
-    chosen_chap = tk.StringVar(root)
-    chosen_chap.set(1)
-
-    chap_entry = tk.Entry(root, 
-                        textvariable=chosen_chap,
-                        width=40,
-                        font=base_font,
-                        )
-    chap_lab = tk.Label(root, text="Chapters (comma-separated):", fg='#C70039', font=base_font)
-    chap_entry.grid(row=1, column=1, padx=10, pady=10)
-    chap_lab.grid(row=1, column=0, padx=10, pady=10)
-
-    # flashcard type (word, grammar, phrase)
+    # flashcard type (vocab, grammar, phrase)
     chosen_type = tk.StringVar(root)
     chosen_type.set(types[0])
 
@@ -67,13 +54,13 @@ def selection_gui():
                                 font=base_font,
                                 )
     type_lab = tk.Label(root, text="Entry type:", fg='#FF5733', font=base_font)
-    type_dropdown.grid(row=2, column=1, padx=10, pady=10)
-    type_lab.grid(row=2, column=0, padx=10, pady=10)
+    type_dropdown.grid(row=1, column=1, padx=10, pady=10)
+    type_lab.grid(row=1, column=0, padx=10, pady=10)
 
-    make_button = tk.Button(
+    selection_button = tk.Button(
         root,
         text="Generate flashcards",
-        command=flashcard_gui(chosen_book.get(), chosen_type.get(), [int(string) for string in chosen_chap.get().split(',')]),
+        command=flashcard_gui(chosen_book.get(), chosen_type.get()),
         font=base_font,
         bg='#FFC300',
         fg="#303030", # text color
@@ -82,12 +69,12 @@ def selection_gui():
         width=40, # fix button width
         height=2,
     )
-    make_button.grid(row=3, column=1, padx=10, pady=10)
+    selection_button.grid(row=2, column=1, padx=10, pady=10)
 
     # return root
     root.mainloop()
 
-def flashcard_gui(book, chapter, card_type):
+def flashcard_gui(book, card_type):
     root = tk.Toplevel()
     root.geometry("2385x1600")
     root.configure(bg='#494949')
