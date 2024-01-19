@@ -31,20 +31,29 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='italian'):
 
     webbrowser.open(link, new=2)
 
-    else:
-        pass
 
-def update_card(card, word, source_dict):
-    """For a button flashcard, update the card the word's translation on first click, or open a hyperlink on second click"""
-    translation = translate(word, source_dict)
+def update_card(entry, source_dict, card, entry_language='italian'):
+    """For a button flashcard, update the card with the translation of 
+    'entry' on first click; open a hyperlink on second click"""
+
+    translation = translate(entry, source_dict)
+
+    if entry_language == 'english':
+        en_entry = entry
+        it_entry = translation
+    else:
+        it_entry = entry
+        en_entry = translation
 
     if card['underline'] == 0:
-        if word.startswith('to ') or translation.startswith('to '):
+        if en_entry.startswith('to '):
             reference_type = 'conjugate'
+        elif " " in entry:
+            reference_type = 'hear'
         else:
             reference_type = 'define'
 
-        look_up_word(word, reference_type)
+        look_up_entry(it_entry, source_dict, reference_type, entry_language='italian')
 
     else:
         new_text = f"{card['text']}\n\n{translation}"
