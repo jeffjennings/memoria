@@ -34,7 +34,7 @@ def selection_gui(books, card_types, languages):
     # root.geometry("850x250")
     root.geometry("2400x2400")
     # root.configure(bg='#494949')
-    root.title("Book and flashcard type selection")
+    root.title("Flashcard selection")
 
     # book to draw flashcards from
     chosen_book = tk.StringVar(root, value=list(books)[0])
@@ -74,17 +74,13 @@ def selection_gui(books, card_types, languages):
 
     type_lab = tk.Label(root, text="Show flashcards in:", fg=colors[3], font=base_font)
     type_lab.grid(row=2, column=0, padx=10, pady=10)   
-
-    # folder name for book dictionaries
-    book_module = books[chosen_book.get()]
-    # load relevant dictionary from book
-    source_dict = get_dictionary(book_module, chosen_type.get())
     
     selection_button = tk.Button(
         root,
         text="Generate flashcards",
-        command=flashcard_gui(source_dict, 
-                              chosen_language.get()),
+        command=lambda: flashcard_gui(chosen_book.get(),
+                                      chosen_type.get(), 
+                                      chosen_language.get()),
         font=base_font,
         width=30, # fix button width
         height=2,
@@ -99,7 +95,7 @@ def selection_gui(books, card_types, languages):
     root.mainloop()
 
 
-def flashcard_gui(source_dict, entry_language):
+def flashcard_gui(book, card_type, card_language):
     """Create an interactive GUI displaying flashcards"""
     root = tk.Toplevel()
     base_font = font.Font(family='Lato', size=16, weight='bold')
@@ -110,8 +106,12 @@ def flashcard_gui(source_dict, entry_language):
     cards = []
     counter = 0 
 
+    # load relevant dictionary from book
+    book_module = books[book]
+    source_dict = get_dictionary(book_module, card_type)
+
     # get all dictionary entries
-    if entry_language == 'English':
+    if card_language == 'English':
         all_entry = list(source_dict)
     else:
         all_entry = list(source_dict.values())
@@ -120,7 +120,7 @@ def flashcard_gui(source_dict, entry_language):
 
     nrow = ncol = 5    
 
-    type_lab = tk.Label(root, text=f"Entries {counter} - {nrow * ncol - 1} of {len(all_entry)}", fg=colors[3], font=base_font)
+    type_lab = tk.Label(root, text=f"Entries {counter + 1} - {nrow * ncol} of {len(all_entry)}", fg=colors[3], font=base_font)
     type_lab.grid(row=9, column=9, padx=6, pady=2)   
 
     for ii in range(nrow):
@@ -140,7 +140,7 @@ def flashcard_gui(source_dict, entry_language):
                 command=lambda idx=counter: update_card(cards[idx], 
                                                         all_entry[idx], 
                                                         source_dict,
-                                                        entry_language
+                                                        card_language
                                                         ),
                 anchor='n', # text alignment
             )
