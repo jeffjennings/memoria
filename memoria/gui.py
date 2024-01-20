@@ -1,30 +1,10 @@
-import sys
-import os
 import tkinter as tk
 from tkinter import font, Tk
 import random 
 # random.seed(47)
 
 from memoria.inputs import books, card_types, languages
-from memoria.helper_funcs import update_card, colors
-
-import memoria
-memoria_path = os.path.dirname(memoria.__file__)
-sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
-
-def get_dictionary(book, card_type):
-    """Load the selected dictionary"""
-
-    if book == "nie_a0_a1pt5":
-        from nie_a0_a1pt5 import vocab, grammar, phrases
-        
-    if card_type == 'Vocabulary':
-        return vocab
-    elif card_type == 'Grammar':
-        return grammar
-    else:
-        return phrases
-
+from memoria.helper_funcs import get_dictionary, update_card, colors
 
 def selection_gui(books, card_types, languages):
     """Create a GUI with options to select a book from which to 
@@ -121,7 +101,7 @@ def flashcard_gui(book, card_type, card_language):
     nrow = ncol = 5    
 
     type_lab = tk.Label(root, text=f"Entries {counter + 1} - {nrow * ncol} of {len(all_entry)}", fg=colors[3], font=base_font)
-    type_lab.grid(row=9, column=9, padx=6, pady=2)   
+    type_lab.grid(row=9, column=0, padx=0, pady=2)   
 
     for ii in range(nrow):
         # vary button size with window size

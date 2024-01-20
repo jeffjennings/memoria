@@ -1,7 +1,25 @@
+import os
+import sys
 import webbrowser
+import memoria
+memoria_path = os.path.dirname(memoria.__file__)
+sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
 
 colors = ['#C70039', '#FF5733', '#17BF14', '#FFC300']
 
+def get_dictionary(book, card_type):
+    """Load the selected dictionary"""
+
+    if book == "nie_a0_a1pt5":
+        from nie_a0_a1pt5 import vocab, grammar, phrases
+        
+    if card_type == 'Vocabulary':
+        return vocab
+    elif card_type == 'Grammar':
+        return grammar
+    else:
+        return phrases
+    
 def translate(entry, source_dict):
     """Get the translation of 'entry' (either English to Italian or vice versa) 
     from the dictionary 'source_dict'"""
