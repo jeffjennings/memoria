@@ -7,22 +7,23 @@ import random
 
 from memoria.inputs import books, card_types, languages
 from memoria.helper_funcs import update_card, colors
+
 import memoria
 memoria_path = os.path.dirname(memoria.__file__)
+sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
 
 def get_dictionary(book, card_type):
     """Load the selected dictionary"""
 
-    sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it/{book}"))
+    if book == "nie_a0_a1pt5":
+        from nie_a0_a1pt5 import vocab, grammar, phrases
+        
     if card_type == 'Vocabulary':
-        import vocab
-        return vocab.vocab
+        return vocab
     elif card_type == 'Grammar':
-        import grammar 
-        return grammar.grammar
+        return grammar
     else:
-        import phrases
-        return phrases.phrases
+        return phrases
 
 
 def selection_gui(books, card_types, languages):
