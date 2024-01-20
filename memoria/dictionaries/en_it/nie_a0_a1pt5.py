@@ -1,4 +1,5 @@
-# New Italian Espresso
+"""New Italian Espresso, book 1 (CEFR levels A0 - first half of A1)"""
+
 vocab = {
     'to study':'studiare',
     'to want':'volere',
@@ -11,4 +12,12 @@ vocab = {
     'to have':'avere',
     'to go':'andare',
     'to think':'pensare',
+    }
+
+grammar = {
+    "Compound prepositions":"<Table>",
+    }
+
+phrases = {
+    "It's windy":"C'è vento.",
     }
