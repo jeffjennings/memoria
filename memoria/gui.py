@@ -6,24 +6,19 @@ import random
 
 from memoria.inputs import books, card_types, languages
 from memoria.helper_funcs import get_dictionary, update_card, colors
-
+    
 def selection_gui(books, card_types, languages):
     """Create a GUI with options to select a book from which to 
     generate a given type of flaschards in a given language"""
     root = Tk()
     base_font = font.Font(family='Lato', size=16, weight='bold')
-    # root.geometry("850x250")
     root.geometry("2400x2400")
-    # root.configure(bg='#494949')
     root.title("Flashcard selection")
 
     # book to draw flashcards from
     chosen_book = tk.StringVar(root, value=list(books)[0])
     
-    book_dropdown = tk.OptionMenu(root, 
-                                chosen_book, 
-                                *list(books),
-                                )
+    book_dropdown = tk.OptionMenu(root, chosen_book, *list(books))
     book_dropdown.grid(row=0, column=1, padx=10, pady=10)
     book_dropdown.config(font=base_font, fg=colors[0], width=30)
 
@@ -47,28 +42,22 @@ def selection_gui(books, card_types, languages):
     # flashcard type (vocab, grammar, phrases)
     chosen_type = tk.StringVar(root, value=card_types[0])
 
-    type_dropdown = tk.OptionMenu(root, 
-                                chosen_type,
-                                *card_types,
-                                )
-    type_dropdown.config(font=base_font, fg=colors[1], width=30)    
-    type_dropdown.grid(row=1, column=1, padx=10, pady=10)    
+    type_dropdown = tk.OptionMenu(root, chosen_type, *card_types)
+    type_dropdown.config(font=base_font, fg=colors[2], width=30)    
+    type_dropdown.grid(row=2, column=1, padx=10, pady=10)    
 
-    type_lab = tk.Label(root, text="Entry type:", fg=colors[1], font=base_font)
-    type_lab.grid(row=1, column=0, padx=10, pady=10)    
+    type_lab = tk.Label(root, text="Entry type:", fg=colors[2], font=base_font)
+    type_lab.grid(row=2, column=0, padx=10, pady=10)    
 
     # flashcard language
     chosen_language = tk.StringVar(root, value=languages[0])
 
-    type_dropdown = tk.OptionMenu(root, 
-                                chosen_language,
-                                *languages,
-                                )
-    type_dropdown.config(font=base_font, fg=colors[3], width=30)
-    type_dropdown.grid(row=2, column=1, padx=10, pady=10)    
+    type_dropdown = tk.OptionMenu(root, chosen_language, *languages)
+    type_dropdown.config(font=base_font, fg=colors[4], width=30)
+    type_dropdown.grid(row=3, column=1, padx=10, pady=10)    
 
-    type_lab = tk.Label(root, text="Show flashcards in:", fg=colors[3], font=base_font)
-    type_lab.grid(row=2, column=0, padx=10, pady=10)   
+    type_lab = tk.Label(root, text="Show flashcards in:", fg=colors[4], font=base_font)
+    type_lab.grid(row=3, column=0, padx=10, pady=10)   
     
     selection_button = tk.Button(
         root,
@@ -82,12 +71,11 @@ def selection_gui(books, card_types, languages):
         height=2,
     )
     selection_button.config(
-        fg=colors[2], # text color
-        activeforeground=colors[3], # text color when moused over
+        fg=colors[3], # text color
+        activeforeground=colors[4], # text color when selected
         )
-    selection_button.grid(row=3, column=1, padx=10, pady=10)
+    selection_button.grid(row=4, column=1, padx=10, pady=10)
 
-    # return root
     root.mainloop()
 
 
@@ -116,7 +104,6 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
         root = tk.Toplevel()
         base_font = font.Font(family='Lato', size=16, weight='bold')
         root.geometry("2400x2400")
-        # root.configure(bg='#494949')
 
         # correctly display the index of the final entry
         max_entries = min(nentry, counter + nxy ** 2)
@@ -147,11 +134,7 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
                                                             ),
                     anchor='n', # align text to top of grid cell
                 )
-                flashcard.config(font=base_font, 
-                                fg=colors[1], 
-                                #  activebackground="#38C5E8",
-                                #  activeforeground="#494949",
-                                )
+                flashcard.config(font=base_font, fg=colors[1])
                 flashcard.grid(row=ii, column=jj, sticky='nsew', padx=4, pady=4)
 
                 cards.append(flashcard)
