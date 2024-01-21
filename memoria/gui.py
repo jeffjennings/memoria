@@ -30,6 +30,20 @@ def selection_gui(books, card_types, languages):
     book_lab = tk.Label(root, text="Book:", fg=colors[0], font=base_font)
     book_lab.grid(row=0, column=0, padx=10, pady=10)
 
+    # chapters in book to draw flashcard entries from 
+    chosen_chap = tk.StringVar(root, value='all')
+
+    chap_entry = tk.Entry(root, textvariable=chosen_chap)
+    chap_entry.config(font=base_font, fg=colors[1], width=30)
+
+    chap_lab = tk.Label(root, 
+                        text="Chapters\n('all' or comma-separated, e.g. '1, 2'):", 
+                        fg=colors[1], 
+                        font=base_font,
+                        )
+    chap_entry.grid(row=1, column=1, padx=10, pady=10)
+    chap_lab.grid(row=1, column=0, padx=10, pady=10)
+
     # flashcard type (vocab, grammar, phrases)
     chosen_type = tk.StringVar(root, value=card_types[0])
 
@@ -60,6 +74,7 @@ def selection_gui(books, card_types, languages):
         root,
         text="Generate flashcards",
         command=lambda: flashcard_gui(chosen_book.get(),
+                                      chosen_chap.get(),
                                       chosen_type.get(), 
                                       chosen_language.get()),
         font=base_font,
@@ -76,14 +91,14 @@ def selection_gui(books, card_types, languages):
     root.mainloop()
 
 
-def flashcard_gui(book, card_type, card_language, nxy=5):
+def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
     """Create interactive GUIs displaying all available flashcards of
       from 'book' of 'card_type' in 'card_language', with each GUI 
       displaying flashcards in an nxy x nxy grid"""
-
-    # load relevant dictionary from book
+    
+    # load dictionary from selected book and chapter(s)
     book_module = books[book]
-    source_dict = get_dictionary(book_module, card_type)
+    source_dict = get_dictionary(book_module, chapter, card_type)
 
     # get all dictionary entries
     if card_language == 'English':
