@@ -1,3 +1,4 @@
+from math import ceil
 import tkinter as tk
 from tkinter import font, Tk
 import random 
@@ -108,26 +109,38 @@ def flashcard_gui(book, card_type, card_language, nxy=5):
         current_idx = f"{card_type} {counter + 1} - {max_entries} of {nentry}"
         root.title(current_idx)
 
+        # loop over rows
+        for ii in range(nxy):
+            # vary button size with window size
+            root.columnconfigure(ii, weight=1, minsize=150)
+            root.rowconfigure(ii, weight=1, minsize=150)
 
-            flashcard = tk.Button(
-                root,
-                text=f"\n {entry}",
-                command=lambda idx=counter: update_card(cards[idx], 
-                                                        all_entry[idx], 
-                                                        source_dict,
-                                                        card_language
-                                                        ),
-                anchor='n', # text alignment
-            )
-            flashcard.config(font=base_font, 
-                             fg=colors[1], 
-                            #  activebackground="#38C5E8",
-                            #  activeforeground="#494949",
-                            )
-            flashcard.grid(row=ii, column=jj, sticky='nsew', padx=4, pady=4)
+            # loop over columns
+            for jj in range(nxy):
+                try:
+                    entry = all_entry[counter]
+                except IndexError:
+                    break
 
-            cards.append(flashcard)
+                flashcard = tk.Button(
+                    root,
+                    text=f"\n {entry}",
+                    command=lambda idx=counter: update_card(cards[idx], 
+                                                            all_entry[idx], 
+                                                            source_dict,
+                                                            card_language
+                                                            ),
+                    anchor='n', # align text to top of grid cell
+                )
+                flashcard.config(font=base_font, 
+                                fg=colors[1], 
+                                #  activebackground="#38C5E8",
+                                #  activeforeground="#494949",
+                                )
+                flashcard.grid(row=ii, column=jj, sticky='nsew', padx=4, pady=4)
 
-            counter += 1
+                cards.append(flashcard)
+
+                counter += 1
 
 selection_gui(books, card_types, languages)
