@@ -75,16 +75,10 @@ def selection_gui(books, card_types, languages):
     root.mainloop()
 
 
-def flashcard_gui(book, card_type, card_language):
-    """Create an interactive GUI displaying flashcards"""
-    root = tk.Toplevel()
-    base_font = font.Font(family='Lato', size=16, weight='bold')
-    root.geometry("2400x2400")
-    # root.configure(bg='#494949')
-    root.title("Flashcards")
-
-    cards = []
-    counter = 0 
+def flashcard_gui(book, card_type, card_language, nxy=5):
+    """Create interactive GUIs displaying all available flashcards of
+      from 'book' of 'card_type' in 'card_language', with each GUI 
+      displaying flashcards in an nxy x nxy grid"""
 
     # load relevant dictionary from book
     book_module = books[book]
@@ -95,18 +89,18 @@ def flashcard_gui(book, card_type, card_language):
         all_entry = list(source_dict)
     else:
         all_entry = list(source_dict.values())
+    nentry = len(all_entry)
     # randomize order (in-place)
     random.shuffle(all_entry)
+    
+    cards = []
+    counter = 0 
 
-    nrow = ncol = 5    
-
-    type_lab = tk.Label(root, text=f"Entries {counter + 1} - {nrow * ncol} of {len(all_entry)}", fg=colors[3], font=base_font)
-    type_lab.grid(row=9, column=0, padx=0, pady=2)   
-
-    for ii in range(nrow):
-        # vary button size with window size
-        root.columnconfigure(ii, weight=1, minsize=150)
-        root.rowconfigure(ii, weight=1, minsize=150)
+    for nn in range(int(ceil(nentry / nxy ** 2))):
+        root = tk.Toplevel()
+        base_font = font.Font(family='Lato', size=16, weight='bold')
+        root.geometry("2400x2400")
+        # root.configure(bg='#494949')
 
         for jj in range(ncol):
             try:
