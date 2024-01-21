@@ -5,7 +5,7 @@ import memoria
 memoria_path = os.path.dirname(memoria.__file__)
 sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
 
-colors = ['#C70039', '#FF5733', '#17BF14', '#FFC300']
+colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300']
 
 def get_dictionary(book, card_type):
     """Load the selected dictionary"""
@@ -21,16 +21,17 @@ def get_dictionary(book, card_type):
         return phrases
     
 def translate(entry, source_dict):
-    """Get the translation of 'entry' (either English to Italian or vice versa) 
-    from the dictionary 'source_dict'"""
+    """Get the translation of 'entry' (either English to foreign language 
+    or vice versa) from the dictionary 'source_dict'"""
 
     return source_dict[entry]
 
 
 def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
-    """Depending on 'reference_type', look up online the definition of an Italian 
-    word or phrase 'entry', its conjugation, or show the Italian form (that we 
-    provide) on google translate to hear it spoken"""
+    """Depending on 'reference_type', look up online the definition of a foreign 
+    language word or phrase 'entry', its conjugation, or show the foreign language 
+    form (as we provide in the `dictionaries` folder) on google translate to hear 
+    it spoken. Currently this is customized to Italian"""
 
     if reference_type == 'define':
         link = f"https://www.wordreference.com/iten/{entry}"
@@ -54,7 +55,8 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
 
 def update_card(card, entry, source_dict, entry_language='English'):
     """For a button flashcard, update the card with the translation of 
-    'entry' on first click; open a hyperlink on second click"""
+    'entry' on first click; open a hyperlink on second click. 
+    Currently this is customized to Italian."""
 
     translation = translate(entry, source_dict)
 
