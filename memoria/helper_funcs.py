@@ -7,19 +7,35 @@ sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
 
 colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300']
 
-def get_dictionary(book, card_type):
-    """Load the selected dictionary"""
+def merge_dict(dict1, dict2):
+    """Combine two dictionaries"""
+    return {**dict1, **dict2}
 
+def get_dictionary(book, chapter, card_type):
+    """Load the selected dictionary"""
     if book == "nie_a0_a1pt5":
-        from nie_a0_a1pt5 import vocab, grammar, phrases
-        
-    if card_type == 'Vocabulary':
-        return vocab
-    elif card_type == 'Grammar':
-        return grammar
+        if card_type == 'Vocabulary':
+            from nie_a0_a1pt5 import vocab as chosen_dict
+        elif card_type == 'Grammar':
+            from nie_a0_a1pt5 import grammar as chosen_dict
+        else:
+            from nie_a0_a1pt5 import phrases as chosen_dict
+
+    all_entries = {}
+    if chapter == 'all':
+        for cc in chosen_dict:
+            all_entries = merge_dict(all_entries, chosen_dict[cc])
+
     else:
-        return phrases
-    
+        # format strings
+        chapter = chapter.replace(",", " ")   
+        chapter = chapter.split()
+        for cc in chapter:
+            all_entries = merge_dict(all_entries, chosen_dict['ch' + cc])
+
+    return all_entries
+
+
 def translate(entry, source_dict):
     """Get the translation of 'entry' (either English to foreign language 
     or vice versa) from the dictionary 'source_dict'"""
