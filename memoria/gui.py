@@ -102,11 +102,12 @@ def flashcard_gui(book, card_type, card_language, nxy=5):
         root.geometry("2400x2400")
         # root.configure(bg='#494949')
 
-        for jj in range(ncol):
-            try:
-                entry = all_entry[counter]
-            except IndexError:
-                break
+        # correctly display the index of the final entry
+        max_entries = min(nentry, counter + nxy ** 2)
+        # indices of the current entries
+        current_idx = f"{card_type} {counter + 1} - {max_entries} of {nentry}"
+        root.title(current_idx)
+
 
             flashcard = tk.Button(
                 root,
