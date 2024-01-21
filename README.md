@@ -1,12 +1,18 @@
 # memoria
-A simple GUI to generate flashcards for memorizing Italian vocabulary, grammar and phrases. Entries are added on a per chapter basis as I work through the Italian textbooks and workbooks of _New Italian Espresso_ and _Nuovo Espresso_, as well as the grammar books _Italian Grammar in Practice_, _English Grammar for Students of Italian_, and _Pocket Italian Grammar_. 
+A simple GUI to generate flashcards for memorizing vocabulary, grammar and phrases of a foreign language. Currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin). New Italian vocabulary, grammar and phrases are added on a per chapter basis as I work through the textbooks and workbooks of _New Italian Espresso_ and _Nuovo Espresso_, and the grammar books _Italian Grammar in Practice_, _English Grammar for Students of Italian_, and _Pocket Italian Grammar_. 
 
-`gui.py` produces a GUI with which you choose: 
+`python gui.py` from the terminal produces a GUI with which you choose: 
 - a book to draw entries from,
-- whether the entries drawn should belong to vocabulary, grammar or phrases, and
-- in which language to display the entries on the flashcards (English or Italian)
+- which chapters in the book to draw from,
+- which type (vocabulary, grammar or phrases) the entries should belong to, and
+- in which language to display the entries on the flashcards (English or the foreign language)
+Grids of flashcards are then generated, spanning all the entries of the chosen type from the chosen source, with the order randomized. Clicking on a flashcard shows its English/foreign language counterpart (or in the case of grammar, the relevant forms). 
 
-A grid of flashcards is then generated. Clicking on a flashcard shows its English/Italian counterpart (or in the case of grammar, the relevant forms).
-- For vocabulary, clicking the flashcard a second time opens the [WordReference](https://www.wordreference.com/iten/) website with a search for the word to obtain its dictionary entry.
-- For verb conjugation, clicking on the flashcard a second time opens the [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/) website with a search for the verb to obtain its conjugations in all tenses.
-- For other grammar or phrases, clicking on the flashcard a second time opens google translate with the Italian version of the entry, so that you can hear it spoken by clicking on the speaker icon there.
+For Italian specifically:
+- Clicking on a vocabulary flashcard a second time opens the [WordReference](https://www.wordreference.com/iten/) website with a search for the word to obtain its dictionary entry.
+- Clicking on a verb flashcard a second time opens the [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/) website with a search for the verb to obtain its conjugations in all tenses.
+- Clicking on other grammar or phrase flashcards a second time opens google translate with the Italian version of the entry, so that you can hear it spoken by clicking on the speaker icon there.
+
+This package is mostly me wanting a fast way to study Italian and learning how to make GUIs in Python with `tkinter`. I've only been using Mac OS, so the formatting of the GUIs might be off on Linux or Windows. If you want to use and/or customize the code for your own language and you'd like some help, or if you have any suggestions, feel free to open an issue!
+
+'memoria' is Latin for 'memory, remembrance'. It's where the phrase 'In memoriam' comes from. It's also Italian for 'memory, remembrance' because if it ain't broke...
