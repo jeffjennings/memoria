@@ -1,3 +1,7 @@
+<p align="center">
+   <img width = "300" src="https://github.com/jeffjennings/memoria/blob/logo/logo.jpg?raw=true"/>
+ </p>
+ 
 # memoria
 A simple GUI to generate flashcards for memorizing vocabulary, grammar and phrases of a foreign language. Currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin). New Italian vocabulary, grammar and phrases are added on a per chapter basis as I work through the textbooks and workbooks of _New Italian Espresso_ and _Nuovo Espresso_, and the grammar books _Italian Grammar in Practice_, _English Grammar for Students of Italian_, and _Pocket Italian Grammar_. 
 
