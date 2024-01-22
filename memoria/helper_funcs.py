@@ -36,18 +36,23 @@ def get_dictionary(book, chapter, card_type):
     return all_entries
 
 
-def translate(entry, source_dict):
+def translate(entry, source_dict, entry_language='English'):
     """Get the translation of 'entry' (either English to foreign language 
     or vice versa) from the dictionary 'source_dict'"""
 
-    return source_dict[entry]
+    if entry_language == 'English':
+        translation = source_dict[entry]
+    else:
+        translation = [i for i in source_dict if source_dict[i] == entry][0]
+        
+    return translation
 
 
 def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
     """Depending on 'reference_type', look up online the definition of a foreign 
     language word or phrase 'entry', its conjugation, or show the foreign language 
     form (as we provide in the `dictionaries` folder) on google translate to hear 
-    it spoken. Currently this is customized to Italian"""
+    it spoken. Currently this is customized to Italian."""
 
     if reference_type == 'define':
         link = f"https://www.wordreference.com/iten/{entry}"
@@ -62,7 +67,7 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
         if entry_language == 'English':
             # don't want to call google translate on an English word/phrase, 
             # as its translation may differ from our stored one
-            entry_no_spaces = translate(entry_no_spaces, source_dict)
+            entry_no_spaces = translate(entry_no_spaces, source_dict, entry_language)
             
         link += f"{entry_no_spaces}%0A&op=translate"
 
@@ -74,7 +79,7 @@ def update_card(card, entry, source_dict, entry_language='English'):
     'entry' on first click; open a hyperlink on second click. 
     Currently this is customized to Italian."""
 
-    translation = translate(entry, source_dict)
+    translation = translate(entry, source_dict, entry_language)
 
     if entry_language == 'English':
         en_entry = entry
