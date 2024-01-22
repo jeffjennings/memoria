@@ -67,7 +67,7 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
         if entry_language == 'English':
             # don't want to call google translate on an English word/phrase, 
             # as its translation may differ from our stored one
-            entry_no_spaces = translate(entry_no_spaces, source_dict, entry_language)
+            entry_no_spaces = translate(entry, source_dict, entry_language)
             
         link += f"{entry_no_spaces}%0A&op=translate"
 
