@@ -78,6 +78,8 @@ def selection_gui(books, card_types, languages):
 
     root.mainloop()
 
+    return root
+
 
 def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
     """Create interactive GUIs displaying all available flashcards of
@@ -96,26 +98,28 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
     nentry = len(all_entry)
     # randomize order (in-place)
     random.shuffle(all_entry)
-    
+
+    windows = []    
     cards = []
     counter = 0 
 
     for nn in range(int(ceil(nentry / nxy ** 2))):
-        root = tk.Toplevel()
+        win = tk.Toplevel()
+        windows.append(win)
         base_font = font.Font(family='Lato', size=16, weight='bold')
-        root.geometry("2400x2400")
+        win.geometry("2400x2400")
 
         # correctly display the index of the final entry
         max_entries = min(nentry, counter + nxy ** 2)
         # indices of the current entries
         current_idx = f"{card_type} {counter + 1} - {max_entries} of {nentry}"
-        root.title(current_idx)
+        win.title(current_idx)
 
         # loop over rows
         for ii in range(nxy):
             # vary button size with window size
-            root.columnconfigure(ii, weight=1, minsize=150)
-            root.rowconfigure(ii, weight=1, minsize=150)
+            win.columnconfigure(ii, weight=1, minsize=150)
+            win.rowconfigure(ii, weight=1, minsize=150)
 
             # loop over columns
             for jj in range(nxy):
@@ -125,7 +129,7 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
                     break
 
                 flashcard = tk.Button(
-                    root,
+                    win,
                     text=f"\n {entry}",
                     command=lambda idx=counter: update_card(cards[idx], 
                                                             all_entry[idx], 
@@ -140,5 +144,7 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
                 cards.append(flashcard)
 
                 counter += 1
+        
+    return windows
 
 selection_gui(books, card_types, languages)
