@@ -1,5 +1,5 @@
 <p align="center">
-   <img width = "300" src="https://github.com/jeffjennings/memoria/blob/logo/logo.jpg?raw=true"/>
+   <img width = "300" src="https://github.com/jeffjennings/memoria/blob/main/logo.jpg?raw=true"/>
  </p>
  
 # memoria
