@@ -19,4 +19,6 @@ For Italian specifically:
 
 This package is mostly me wanting a fast way to study Italian and learning how to make GUIs in Python with `tkinter`. I've only been using Mac OS, so the formatting of the GUIs might be off on Linux or Windows. If you want to use and/or customize the code for your own language and you'd like some help, or if you have any suggestions, feel free to open an issue!
 
-'memoria' is Latin (and Italian!) for 'memory, remembrance'. Hence the Latin phrase 'In memoriam', and the English derivatives 'memorial' and 'memoir'.
+_memoria_ is Latin (and Italian!) for 'memory, remembrance'. Hence the Latin phrase 'In memoriam', and the English derivatives 'memorial' and 'memoir'.
+
+The logo is a Roman mosaic showing μνημοσύνη (Mnemosyne), the Greek Titan of memory and mother of the nine Muses. μνήμη	is Greek for 'memory, remembrance' and is the origin of the English derivative 'mnemonic'.
