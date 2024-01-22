@@ -13,16 +13,85 @@ vocab = {
         'to have':'avere',
         'to go':'andare',
         'to think':'pensare',
+        'to need':'necessitare',
+        'to teach':'insegnare',
+        'time':'tempo',
+        'hour':'ora',
+        'minute':'minuto(a)',
+        'second':'secondo(a)',
+        'above/on/upon':'sopra',
+        'under/below/benath':'sotto',
+        'out/away':'fuori',
+        'subtitles':'sottotitoli',
+        'coffee':'caffè (m.)',
+        'newspaper':'giornale (m.)',
+        'suitcase':'valigia',
+        'nationality':'nazionalità',
+        'clock':'orologio',
+        'chair':'sedia',
+        'door':'porta',
+        'table':'tavolo',
+        'bed':'letto',
+        'pen':'penna',
+        'book':'libro',
+        'guitar':'chitarra',
+        'sugar':'zucchero',
+        'kilo':'chilo',
+        'heart':'cuore (m.)',
+        'cook':'cuoco',
+        'vocabulary/lexicon':'lessico',
+        'school':'scuola',
+        'music':'musica',
+        'combination':'combinazione (f.)',
+        'orange':'arancia',
+        'church':'chiesa',
+        'bicycle':'bicicletta',
+        'car':'macchina',
+        'chocolate':'cioccolato',
+        'key':'chiave',
+        'center':'centro',
+        'suburbs':'periferia',
+        'window':'finestra',
+        'teacher':'insegnante',
+        'lesson/lecture':'lezione (f.)',
+        'professor':'professore/professoressa',
+        'blackboard':'lavagna',
+        'computer':'computer',
+        '(cell) phone':'telefono, cellulare',
+        'episode':'episodio',
+        'bank':'banca',
+        'office':'ufficio',
+        'hospital':'ospedale (m.)',
+        'desk':'scrivania',
+        'job (2 forms)':'occupazione (f.), lavoro',        
+        'big':'grande',
+        'small':'piccolo',
+        'here':'qui',
+        'city':'città',
+        'region':'regione (f.)',
+        'light':'luce (f.)',
+        'woman':'donna',
+        'man':'uomo',
+        'feminine':'femminile',
+        'masculine':'maschile',
+
         },
     'ch2':{
-        'test it':'test en'
+        
     },
 }
 
 grammar = {
-    "Compound prepositions":"<Table>",
-    }
+    'ch1':{
+
+    },
+}
 
 phrases = {
-    "It's windy":"C'è vento.",
-    }
+    'ch1':{
+    'Where do you live?':'Dove abiti?',
+    'Where are you from?':'Di dove sei?',
+    'Where is she from?':"Di dov'è?",
+    'What do you study?':'Che cosa studi?'
+    },
+}
