@@ -1,3 +1,7 @@
+<p align="center">
+   <img width = "300" src="https://github.com/jeffjennings/memoria/blob/logo/logo.jpg?raw=true"/>
+ </p>
+ 
 # memoria
 A simple GUI to generate flashcards for memorizing vocabulary, grammar and phrases of a foreign language. Currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin). New Italian vocabulary, grammar and phrases are added on a per chapter basis as I work through the textbooks and workbooks of _New Italian Espresso_ and _Nuovo Espresso_, and the grammar books _Italian Grammar in Practice_, _English Grammar for Students of Italian_, and _Pocket Italian Grammar_. 
 
@@ -15,4 +19,6 @@ For Italian specifically:
 
 This package is mostly me wanting a fast way to study Italian and learning how to make GUIs in Python with `tkinter`. I've only been using Mac OS, so the formatting of the GUIs might be off on Linux or Windows. If you want to use and/or customize the code for your own language and you'd like some help, or if you have any suggestions, feel free to open an issue!
 
-'memoria' is Latin for 'memory, remembrance'. It's where the phrase 'In memoriam' comes from. It's also Italian for 'memory, remembrance' because if it ain't broke...
+_memoria_ is Latin (and Italian!) for 'memory, remembrance'. Hence the Latin phrase 'In memoriam', and the English derivatives 'memorial' and 'memoir'.
+
+The logo is a Roman mosaic showing μνημοσύνη (Mnemosyne), the Greek Titan of memory and mother of the nine Muses. μνήμη	is Greek for 'memory, remembrance' and is the origin of the English derivative 'mnemonic'.
