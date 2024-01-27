@@ -1,9 +1,22 @@
 <p align="center">
    <img width = "300" src="https://github.com/jeffjennings/memoria/blob/main/logo.jpg?raw=true"/>
  </p>
- 
-# memoria
-A simple GUI to generate flashcards for memorizing vocabulary, grammar and phrases of a foreign language. Currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin) -- just add new dictionaries with the English and foreign language counterparts, and update a few hyperlinks.
+
+<p align="center">
+A simple GUI to generate flashcards for memorizing vocabulary, grammar and phrases of a foreign language.
+</p>
+
+<p align="center">
+  <!-- current release -->
+  <a href="https://github.com/jeffjennings/memoria/releases">
+      <img src="https://img.shields.io/github/release/jeffjennings/memoria/all.svg">
+  </a>
+
+  <!-- current version on pypi -->
+  <a href="https://pypi.python.org/pypi/memoria-gui">
+      <img src="https://img.shields.io/pypi/v/memoria-gui.svg">
+
+</p>
 
 Install
 -------
@@ -18,6 +31,8 @@ Using _memoria_
 - in which language to display the entries on the flashcards (English or the foreign language).
 
 Grids of flashcards are then generated, spanning all the entries of the chosen type from the chosen source, with the order randomized. Clicking on a flashcard shows its English/foreign language counterpart (or in the case of grammar, the relevant forms). 
+
+_memoria_ is currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin) - just add new dictionaries with the English and foreign language counterparts.
 
 Using _memoria_ for Italian
 ---------------------------
