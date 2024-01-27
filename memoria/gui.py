@@ -147,4 +147,5 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
         
     return windows
 
-selection_gui(books, card_types, languages)
+if __name__ == "__main__":
+    selection_gui(books, card_types, languages)
