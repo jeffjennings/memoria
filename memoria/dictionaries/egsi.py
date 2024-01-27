@@ -19,7 +19,6 @@ vocab = {
         'to ask':'chiedere',
         'to come':'venire',
         'possible':'possibile',
-        'receipt':'scontrino',
         },
     'ch2':{  
     },
