@@ -272,6 +272,7 @@ phrases = {
         'See you later.':'Adopo.',
         'See you tomorrow.':'A domani.',
     },
+
     'ch2':{
         'Excuse me (formal, in-)':'Scusi, Scusa',
         "I'll have...":'Io prendo...',
@@ -288,5 +289,21 @@ phrases = {
         'This (that) is...':"Questo (quello) è...",
         "I'm hungry, I'm thirsty":'Ho fame, Ho sete',
         "What a passion!":'Che passione!',
+    },    
+
+    'ch3':{
+        'I understand.':'Ho capito.',
+        "I'm married.":'Sono sposato.',
+        'This is... (introducing someone)':'Lui (lei) è...'
+        'Congrats!':'Complimenti!',
+        'I have two kids.':'Ho due figli.',
+        'I speak Italian.':"Parlo l'italiano.",
+        'a friend of mine':'uno mio amico',
+        "What's your job?":'Che lavoro fai?',
+        "How old are you?":'Quanti anni hai?',
+        "What are you doing?":'Cosa fai?',
+        'Are you from here?':'Sei di qui?',
+        'How are you? (formal, in-, either)':'Come sta?, Come stai?, Come va?'
+        "I'm very good, good, not bad, bad.":"Sto benissimo, Sto bene, Non c'è male, Sto male",
     },    
 }
