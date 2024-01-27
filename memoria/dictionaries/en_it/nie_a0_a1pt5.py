@@ -102,6 +102,20 @@ phrases = {
     'Where do you live?':'Dove abiti?',
     'Where are you from?':'Di dove sei?',
     'Where is she from?':"Di dov'è?",
-    'What do you study?':'Che cosa studi?'
+    'What do you study?':'Che cosa studi?',
+    'Until next time.':'Alla prossima volta.',
+    'My name is...':'Mi chiamo...',
+    "What's your name?":"Come ti chiami?",
+    'How do you say...?':'Come si dice...?',
+    'How do you spell...?':'Come si scrive...?',
+    'How do you pronounce...?':'Come si pronuncia...?',
+    'Can you repeat that?':'Puoi ripetere?',
+    'What does (it) mean?':'Che cosa (...) significa?',
+    'What would you like?':'Desidera?',
+    "I'm sorry.":'Mi dispiace.',
+    'See you soon. (2 forms)':'A presto, A tra poco.',
+    'See you later.':'Adopo.',
+    'See you tomorrow.':'A domani.',
+
     },
 }
