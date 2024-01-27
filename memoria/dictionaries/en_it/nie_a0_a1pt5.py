@@ -411,6 +411,16 @@ phrases = {
         "I'm very good, good, not bad, bad.":"Sto benissimo, Sto bene, Non c'è male, Sto male",
     },    
 
+    'ch4':{
+        'What do you do in your free time?':'Che cosa fai nel tempo libero?',
+        'What do you feel like doing now?':'Di che cosa hai voglia adesso?',
+        'What are you afraid of?':'Di che cosa hai paura?',
+        'Who knows.':'Chissà.',
+        "I can't wait.":"Non vedo l'ora.",
+        "I like... (singular, plural)":'Mi piace, Mi piacciono',
+        'Do you like...? (singular, plural)':'Ti piace...?, Ti piacciono...?',
+    },    
+
     'ch5':{
         
     },
