@@ -1,4 +1,7 @@
-# languages for flashcards
+# languages with user-created dictionaries
+supported_languages = ["Italian"]
+
+# languages to display flashcard text
 languages = ["English", "Italian"]
 
 # content to put on flashcards

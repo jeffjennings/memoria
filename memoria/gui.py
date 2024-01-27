@@ -4,7 +4,7 @@ from tkinter import font, Tk
 import random 
 # random.seed(47)
 
-from memoria.inputs import books, card_types, languages
+from memoria.inputs import books, card_types, languages, supported_languages
 from memoria.helper_funcs import get_dictionary, update_card, colors
 
 def base_gui(supported_languages):
@@ -33,15 +33,20 @@ def base_gui(supported_languages):
 
     root.mainloop()
 
+
+def selection_gui(root, books, card_types, languages, base_font):
+    """Update a supplied 'root' GUI with options to select a book from which to 
+    generate a given type of flaschards in a given language"""
+
     # book to draw flashcards from
     chosen_book = tk.StringVar(root, value=list(books)[0])
     
     book_dropdown = tk.OptionMenu(root, chosen_book, *list(books))
-    book_dropdown.grid(row=0, column=1, padx=10, pady=10)
+    book_dropdown.grid(row=1, column=1, padx=10, pady=10)
     book_dropdown.config(font=base_font, fg=colors[0], width=30)
 
     book_lab = tk.Label(root, text="Book:", fg=colors[0], font=base_font)
-    book_lab.grid(row=0, column=0, padx=10, pady=10)
+    book_lab.grid(row=1, column=0, padx=10, pady=10)
 
     # chapters in book to draw flashcard entries from 
     chosen_chap = tk.StringVar(root, value='all')
@@ -54,28 +59,28 @@ def base_gui(supported_languages):
                         fg=colors[1], 
                         font=base_font,
                         )
-    chap_entry.grid(row=1, column=1, padx=10, pady=10)
-    chap_lab.grid(row=1, column=0, padx=10, pady=10)
+    chap_entry.grid(row=2, column=1, padx=10, pady=10)
+    chap_lab.grid(row=2, column=0, padx=10, pady=10)
 
     # flashcard type (vocab, grammar, phrases)
     chosen_type = tk.StringVar(root, value=card_types[0])
 
     type_dropdown = tk.OptionMenu(root, chosen_type, *card_types)
     type_dropdown.config(font=base_font, fg=colors[2], width=30)    
-    type_dropdown.grid(row=2, column=1, padx=10, pady=10)    
+    type_dropdown.grid(row=3, column=1, padx=10, pady=10)    
 
     type_lab = tk.Label(root, text="Entry type:", fg=colors[2], font=base_font)
-    type_lab.grid(row=2, column=0, padx=10, pady=10)    
+    type_lab.grid(row=3, column=0, padx=10, pady=10)    
 
     # flashcard language
     chosen_language = tk.StringVar(root, value=languages[0])
 
-    type_dropdown = tk.OptionMenu(root, chosen_language, *languages)
-    type_dropdown.config(font=base_font, fg=colors[4], width=30)
-    type_dropdown.grid(row=3, column=1, padx=10, pady=10)    
+    lang_dropdown = tk.OptionMenu(root, chosen_language, *languages)
+    lang_dropdown.config(font=base_font, fg=colors[4], width=30)
+    lang_dropdown.grid(row=4, column=1, padx=10, pady=10)
 
-    type_lab = tk.Label(root, text="Show flashcards in:", fg=colors[4], font=base_font)
-    type_lab.grid(row=3, column=0, padx=10, pady=10)   
+    lang_lab = tk.Label(root, text="Show flashcards in:", fg=colors[4], font=base_font)
+    lang_lab.grid(row=4, column=0, padx=10, pady=10)   
     
     selection_button = tk.Button(
         root,
@@ -92,9 +97,7 @@ def base_gui(supported_languages):
         fg=colors[3], # text color
         activeforeground=colors[4], # text color when selected
         )
-    selection_button.grid(row=4, column=1, padx=10, pady=10)
-
-    root.mainloop()
+    selection_button.grid(row=5, column=1, padx=10, pady=10)
 
     return root
 
@@ -165,4 +168,5 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
         
     return windows
 
-selection_gui(books, card_types, languages)
+if __name__ == '__main__':
+    base_gui(languages)
