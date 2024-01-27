@@ -1,6 +1,7 @@
 import os
 import sys
 import webbrowser
+from memoria.inputs import languages
 import memoria
 memoria_path = os.path.dirname(memoria.__file__)
 sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
@@ -52,12 +53,14 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
     """Depending on 'reference_type', look up online the definition of a foreign 
     language word or phrase 'entry', its conjugation, or show the foreign language 
     form (as we provide in the `dictionaries` folder) on google translate to hear 
-    it spoken. Currently this is customized to Italian."""
+    it spoken."""
 
     if reference_type == 'define':
-        link = f"https://www.wordreference.com/iten/{entry}"
+        if entry_language == 'Italian':
+            link = f"https://www.wordreference.com/iten/{entry}"
     elif reference_type == 'conjugate': 
-        link = f"https://sapere.virgilio.it/parole/coniuga-verbi/{entry}"
+        if entry_language == 'Italian':
+            link = f"https://sapere.virgilio.it/parole/coniuga-verbi/{entry}"
     else:
         link = "https://translate.google.com/?sl=it&tl=en&text="
 
@@ -76,27 +79,27 @@ def look_up_entry(entry, source_dict, reference_type, entry_language='Italian'):
 
 def update_card(card, entry, source_dict, entry_language='English'):
     """For a button flashcard, update the card with the translation of 
-    'entry' on first click; open a hyperlink on second click. 
-    Currently this is customized to Italian."""
+    'entry' on first click; open a hyperlink on second click."""
 
     translation = translate(entry, source_dict, entry_language)
 
     if entry_language == 'English':
-        en_entry = entry
-        it_entry = translation
+        english_entry = entry
+        foreign_entry = translation
     else:
-        it_entry = entry
-        en_entry = translation
+        foreign_entry = entry
+        english_entry = translation
 
     if card['underline'] == 0:
-        if en_entry.startswith('to '):
+        if english_entry.startswith('to '):
             reference_type = 'conjugate'
         elif " " in entry:
             reference_type = 'hear'
         else:
             reference_type = 'define'
 
-        look_up_entry(it_entry, source_dict, reference_type, entry_language='Italian')
+        if 'Italian' in languages:
+            look_up_entry(foreign_entry, source_dict, reference_type, entry_language='Italian')
 
     else:
         new_text = f"{card['text']}\n\n{translation}"
