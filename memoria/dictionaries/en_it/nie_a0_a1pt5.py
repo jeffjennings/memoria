@@ -554,11 +554,22 @@ phrases = {
         "Really?":"Ma dai?",
         "Gladly. (2 forms)":"Con piacere. / Volentieri.",
         "What time is it? (2 forms)":"Che ora è? / Che ore sono?",
-        "It's noon (midnight), It's one o'clock, It's 5 past two, It's 2:15, It's 2:30, It's 20 to 3:00, It's a quarter to 3:00":"è mezzogiorno (mezzanotte), è l'una, Sono le due e cinque, Sono le due e un quarto, Sono le due e mezza, Sono le tre meno venti, Sono le tre meno un quarto",
+        "It's noon (midnight), It's one o'clock, It's 5 past two, It's 2:15, It's 2:30, It's 20 to 3:00, It's a quarter to 3:00":"è mezzogiorno (mezzanotte), è l'una, Sono le due e cinque, ... e un quarto, ... e mezza, Sono le tre meno venti, Sono le tre meno un quarto",
     },
 
     'ch6':{
-        
+        'How much is a single room?':'Quanto viene una camera singola?',
+        "There's no hot water":"Non c'è l'acqua calda.",
+        "The TV is broken.":"La televisione è rotta.",
+        "The A.C. isn't working":"L'aria condizionata non funziona.",
+        "Can I have another blanket?":"Posso avere un'altra coperta?",
+        "What time do we have to leave the room?":"A che ora dobbiamo lasciare la stanza?",
+        "Do I have to pay extra for the dog?":"Devo pagare un extra per il cane?",
+        "Can I leave my luggage at the reception?":"Posso lasciare le valigie alla reception?",
+        "Best regards.":"Cordiali saluti.",
+        "We'll take care of everything.":"Pensiamo noi a tutto.",
+        "If you want to stick around...":"Se vuoi restare in giro...",
+        "What do you prefer?":"Cosa preferisci?",
     },  
 
     'ch7':{
