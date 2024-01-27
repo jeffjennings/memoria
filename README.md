@@ -10,6 +10,7 @@ A simple GUI to generate flashcards for memorizing vocabulary, grammar and phras
 - which chapters in the book to draw from,
 - which type of entry to draw (vocabulary, grammar or phrases), and
 - in which language to display the entries on the flashcards (English or the foreign language).
+
 Grids of flashcards are then generated, spanning all the entries of the chosen type from the chosen source, with the order randomized. Clicking on a flashcard shows its English/foreign language counterpart (or in the case of grammar, the relevant forms). 
 
 For Italian specifically:
