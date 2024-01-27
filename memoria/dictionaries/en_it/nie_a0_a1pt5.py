@@ -247,10 +247,10 @@ vocab = {
     },
 
     'ch4':{
-        'Adverbs of frequency: (almost) always, usually, often, sometimes, never':'(quasi) sempre, di solito, spesso, qualche volta, mai',
+        '(almost) always, usually, often, sometimes, never':'(quasi) sempre, di solito, spesso, qualche volta, mai',
         'at all, not much, quite, much, very much':'per niente, non molto, abbastanza, molto, moltissimo',
-        'Interrogatives: How?, Where?, When?, Why?, Who/whom?, What? (2 forms), Which?/What? (m., f., plural), How much? (How many?)': 'Come?, Dove?, Quando?, Perchè?, Chi?, Che?/Che cosa?, Quale? (Quale?, Quali?), Quanto? (Quanti?)',
-        'University departments: Humanities, Law, Economics, Political Sciences, Engineering, Architecture, Medicine':'Lettere e Filosofia, Giurisprudenza, Economia, Scienze Politiche, Ingegneria, Architettura, Medicina',
+        'How?, Where?, When?, Why?, Who/whom?, What? (2 forms), Which?/What? (m., f., plural), How much? (How many?)': 'Come?, Dove?, Quando?, Perchè?, Chi?, Che?/Che cosa?, Quale? (Quale?, Quali?), Quanto? (Quanti?)',
+        'Humanities, Law, Economics, Political Sciences, Engineering, Architecture, Medicine':'Lettere e Filosofia, Giurisprudenza, Economia, Scienze Politiche, Ingegneria, Architettura, Medicina',
         'to feel like':'avere voglia (di)',
         'to need (to)':'avere bisogno (di)',
         'to be afraid (of)':'avere paura (di)',
@@ -333,7 +333,7 @@ vocab = {
         'gas station':'distributore (m.)',
         'parking area':'parcheggio',
         'bus stop':"fermata dell'autobus",
-        'Prepositions: in front of (2 forms), next to (2 forms), between (2 forms), behind':'davanti a / di fronte a, accanto / vicina, tra / fra, dietro',
+        'in front of (2 forms), next to (2 forms), between (2 forms), behind':'davanti a / di fronte a, accanto / vicina, tra / fra, dietro',
         'cheap, expensive':'economico, caro',
         'interesting':'interessante',
         'tourist (adjective)':'turistico',

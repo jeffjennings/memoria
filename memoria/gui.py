@@ -106,7 +106,7 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
     for nn in range(int(ceil(nentry / nxy ** 2))):
         win = tk.Toplevel()
         windows.append(win)
-        base_font = font.Font(family='Lato', size=16, weight='bold')
+        base_font = font.Font(family='Lato', size=13, weight='bold')
         win.geometry("2400x2400")
 
         # correctly display the index of the final entry
@@ -137,6 +137,7 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
                                                             card_language
                                                             ),
                     anchor='n', # align text to top of grid cell
+                    wraplength=240,
                 )
                 flashcard.config(font=base_font, fg=colors[1])
                 flashcard.grid(row=ii, column=jj, sticky='nsew', padx=4, pady=4)
