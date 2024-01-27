@@ -206,7 +206,8 @@ vocab = {
         'hairdresser':'parruchiere, parruchiera',
         'age':'età',
         'place':'posto',
-        'bookstore, library':'libreria, biblioteca',
+        'bookstore':'libreria',
+        'library':'biblioteca',
         'language':'lingua',
         'university':'università',
         'dream':'sogno',
@@ -301,69 +302,79 @@ vocab = {
     },
 
     'ch5':{
-        
-    },
-
-    'ch6':{
-        
-    },  
-
-    'ch7':{
-        
-    },      
-
-    'ch8':{
-        
-    },
-
-    'ch9':{
-        
-    },
-
-    'ch10':{
-        
-    },  
-
-    'ch11':{
-        
-    },  
-
-    'ch12':{
-        
-    },
-
-    'ch13':{
-        
-    },
-
-    'ch14':{
-        
-    },  
-
-    'ch15':{
-        
-    },  
-}
-
-grammar = {
-    'ch1':{
-
-    },
-
-    'ch2':{
-        
-    },
-
-    'ch3':{
-        
-    },
-
-    'ch4':{
-        
-    },
-
-    'ch5':{
-        
+        'so/thus/like this':'così',
+        'beach':'spiaggia',
+        'apartment':'appartamento',
+        'level of a building':'piano',
+        'bedroom':'camera',
+        'terrace':'terrazza',
+        'scooter':'motorino',
+        'train':'treno',
+        'plane':'aereo',
+        'bus':'autobus (m.)',
+        'ship':'nave (f.)',
+        'street/road':'strada',
+        'building':'palazzo',
+        'square':'piazza',
+        'fountain':'fontana',
+        'neighborhood':'quartiere (m.)',
+        '(historic) center':'centro (storico)',
+        'intersection/crossroads':'incrocio',
+        'traffic':'traffico',
+        'traffic light':'semaforo',
+        'supermarket':'supermercato',
+        'stationary store':'cartoleria',
+        'newsstand':'edicola',
+        'fruit shop':'fruttivendolo',
+        'butcher shop':'macelleria',
+        'fish shop':'pescheria',
+        'bar/club':'locale (m.)',
+        'hotel (2 forms)':'hotel (m.), albergo',
+        'gas station':'distributore (m.)',
+        'parking area':'parcheggio',
+        'bus stop':"fermata dell'autobus",
+        'Prepositions: in front of (2 forms), next to (2 forms), between (2 forms), behind':'davanti a / di fronte a, accanto / vicina, tra / fra, dietro',
+        'cheap, expensive':'economico, caro',
+        'interesting':'interessante',
+        'tourist (adjective)':'turistico',
+        'elegant':'elegante',
+        'typical':'tipico',
+        'dangerous, safe':'pericoloso, sicuro',
+        'ancient, modern':'antico, moderno',
+        'famous, unknown':'famoso, sconosciuto',
+        'beautiful/handsome, ugly':'bello, brutto',
+        'high/tall, low/short':'alto, basso',
+        'long, short':'lungo, corto',
+        'calm/relaxed, stressful':'tranquillo, stressante',
+        'chaotic':'caotico',
+        'simple':'semplice',
+        'unique':'unico',
+        'angle/edge/corner':'angolo',
+        'immediately/right away':'subito',
+        'station':'stazione (f.)',
+        'here (2 forms)':'qui, ecco',
+        'there is (not), there are (not)':"(non) c'è, (non) ci sono",
+        'to give':'dare',
+        'to say':'dire',
+        'to arrive/to come':'venire',
+        'to stay':'rimanere',
+        'to choose':'scegliere',
+        'to lexit/leave/go out':'uscire',
+        'lie, truth':'bugia, verità',
+        'left, right, straight':'sinistra, destra, dritto',
+        'to cross/go through/pass through':'attraversare',
+        'to turn/rotate':'girare',
+        'up to/until':'fino',
+        'tired/exhausted':'stanco',
+        'however/in any case/even so':'comunque',
+        'sea/ocean':'mare (m.)',
+        'island/isle':'isola',
+        'park/gardens':'parco',
+        'tree':'albero',
+        'to lose/to miss':'perdere',
+        'to find':'trovare',
+        'different':'diverso',
+        'colosseum':'colosseo',
     },
 
     'ch6':{
