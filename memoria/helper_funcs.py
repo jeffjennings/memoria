@@ -6,7 +6,7 @@ import memoria
 memoria_path = os.path.dirname(memoria.__file__)
 sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
 
-colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300']
+colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300', '#31CDD7']
 
 def merge_dict(dict1, dict2):
     """Combine two dictionaries"""
