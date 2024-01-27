@@ -211,7 +211,6 @@ vocab = {
         'language':'lingua',
         'university':'università',
         'dream':'sogno',
-        'countryside':'campagna',
         'country/village':'paese (m.)',
         'world':'mondo',
         'morning, afternoon, evening, night':'mattina, pomeriggio, sera, notte', 
@@ -366,8 +365,6 @@ vocab = {
         'up to/until':'fino',
         'tired/exhausted':'stanco',
         'however/in any case/even so':'comunque',
-        'sea/ocean':'mare (m.)',
-        'island/isle':'isola',
         'park/gardens':'parco',
         'tree':'albero',
         'to lose/to miss':'perdere',
@@ -608,7 +605,14 @@ phrases = {
     },  
 
     'ch7':{
-        
+        "The package includes...":"Il pacchetto include...",
+        "I would like some information":"Vorrei qualche informazione.",
+        "How long does it take by train?":"Quanto tempo ci vuole con in treno?",
+        "It takes one hour.":"Ci vuole un'ora.",
+        "What's the weather like?":"Che tempo fa?",
+        "It's hot (cold, windy, raining, snowing).":"Fa caldo (fa freddo, C'è vento., Piove., Nevica.)",
+        "The weather is nice (bad)":"Fa bel (brutto) tempo.",
+        "storm, rain, sun":"temporale (m.), pioggia, sole (m.)",
     },      
 
     'ch8':{
