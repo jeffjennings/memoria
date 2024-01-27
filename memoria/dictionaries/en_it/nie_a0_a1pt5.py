@@ -487,6 +487,87 @@ phrases = {
     },    
 
     'ch5':{
+        'Excuse me, is there a supermarket nearby?':"Scusi, c'è un supermercato qui vicino?",
+        'Where is Piazza Navona?':"Dov'è Piazza Navona?",
+        'You turn to the left (right).':'Giri a sinistra (a destra).',
+        'You go straight ahead.':'Vai dritto.',
+        'You cross the street (square, bridge).':'Attraversi la strada (la piazza, il ponte).',
+        'You take the first street on the left (right)':'Prendi la strada a sinistra (a destra).',
+        'In my opinion...':'Secondo me...',
+        'Is it far?':"è lontano?",
+        "We're going there for sure.":'Ci andiamo di sicuro.',
+        "What's up? / What is it?":"Che c'è?",
+        "Wait.":"Aspetta.",
+        "You're right":"Hai ragione.",
+        "Are you sure?":"Sei sicuro?",
+        "What are you saying?!":"Ma che dici?",
+        "In short... / In conclusion...":"Insomma...",
+        "Really?":"Ma dai?",
+        "Gladly. (2 forms)":"Con piacere. / Volentieri.",
+        "What time is it? (2 forms)":"Che ora è? / Che ore sono?",
+        "It's noon (midnight), It's one o'clock, It's 5 past two, It's 2:15, It's 2:30, It's 20 to 3:00, It's a quarter to 3:00":"è mezzogiorno (mezzanotte), è l'una, Sono le due e cinque, Sono le due e un quarto, Sono le due e mezza, Sono le tre meno venti, Sono le tre meno un quarto",
+    },
+
+    'ch6':{
+        
+    },  
+
+    'ch7':{
+        
+    },      
+
+    'ch8':{
+        
+    },
+
+    'ch9':{
+        
+    },
+
+    'ch10':{
+        
+    },  
+
+    'ch11':{
+        
+    },  
+
+    'ch12':{
+        
+    },
+
+    'ch13':{
+        
+    },
+
+    'ch14':{
+        
+    },  
+
+    'ch15':{
+        
+    },  
+}
+
+
+grammar = {
+    'ch1':{
+
+    },
+
+    'ch2':{
+        
+    },
+
+    'ch3':{
+        
+    },
+
+    'ch4':{
+        
+    },
+
+    'ch5':{
         
     },
 
