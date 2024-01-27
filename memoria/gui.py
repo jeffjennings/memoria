@@ -6,14 +6,32 @@ import random
 
 from memoria.inputs import books, card_types, languages
 from memoria.helper_funcs import get_dictionary, update_card, colors
-    
-def selection_gui(books, card_types, languages):
-    """Create a GUI with options to select a book from which to 
-    generate a given type of flaschards in a given language"""
+
+def base_gui(supported_languages):
+    """Create a GUI with the option to select a language to study"""
     root = Tk()
     base_font = font.Font(family='Lato', size=16, weight='bold')
     root.geometry("2400x2400")
     root.title("Flashcard selection")
+
+    base_language = tk.StringVar(root, value="Italian")
+    
+    base_lang_dropdown = tk.OptionMenu(root, 
+                                  base_language, 
+                                  *list(supported_languages), 
+                                  command= selection_gui(root, 
+                                                         books, 
+                                                         card_types, 
+                                                         languages, 
+                                                         base_font)
+                                )
+    base_lang_dropdown.grid(row=0, column=1, padx=10, pady=10)
+    base_lang_dropdown.config(font=base_font, fg=colors[0], width=30)
+
+    base_lang_lab = tk.Label(root, text="Language:", fg='k', font=base_font)
+    base_lang_lab.grid(row=0, column=0, padx=10, pady=10)
+
+    root.mainloop()
 
     # book to draw flashcards from
     chosen_book = tk.StringVar(root, value=list(books)[0])
