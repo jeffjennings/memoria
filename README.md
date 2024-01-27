@@ -41,10 +41,10 @@ For Italian specifically:
 - Clicking on a verb flashcard a second time opens the [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/) website with a search for the verb to obtain its conjugations in all tenses.
 - Clicking on other grammar or phrase flashcards a second time opens google translate with the Italian version of the entry, so that you can hear it spoken by clicking on the speaker icon there.
 - If you're interested in learning Italian, these are the books I'm using (and the source of flashcard entries in the code). Together I think they should provide a good teaching of [CEFR levels](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale) A1 - C2 of the language (i.e., from beginner to fluent), including a strong understanding of the grammar:
-   * _New Italian Espresso - Beginner and Pre-intermediate_ (CEFR level A0 - A1.5) and _Intermediate and Advanced_ (CEFR level A1.5 - B1) - the textbooks and workbooks
+   * _New Italian Espresso - Beginner and Pre-intermediate_ (CEFR levels A0 - A1.5) and _Intermediate and Advanced_ (CEFR levels A1.5 - B1) - in addition to the textbooks, the workbooks are good practice
    * _Nuovo Espresso 4, 5, 6_ (CEFR levels B2, C1, C2) - these books are only in Italian
+   * _Italian Grammar in Practice_ (CEFR levels A1 - B2) - made by the same publisher of _New Italian Espresso_ and _Nuovo Espresso_
    * _English Grammar for Students of Italian_ 
-   * _Italian Grammar in Practice_ (covering CEFR levels A1 - B2)
    * _Pocket Italian Grammar_
 
 Background
