@@ -86,6 +86,7 @@ vocab = {
         'address':'indirizzo',
         'friend':'amico',
         },
+
     'ch2':{
         'water':'acqua',
         'beer':'birra',
@@ -244,12 +245,115 @@ vocab = {
         'weekend':'fine settimana (m.)',
     },
 
+    'ch4':{
+        
+    },
+
+    'ch5':{
+        
+    },
+
+    'ch6':{
+        
+    },  
+
+    'ch7':{
+        
+    },      
+
+    'ch8':{
+        
+    },
+
+    'ch9':{
+        
+    },
+
+    'ch10':{
+        
+    },  
+
+    'ch11':{
+        
+    },  
+
+    'ch12':{
+        
+    },
+
+    'ch13':{
+        
+    },
+
+    'ch14':{
+        
+    },  
+
+    'ch15':{
+        
+    },  
 }
 
 grammar = {
     'ch1':{
 
     },
+
+    'ch2':{
+        
+    },
+
+    'ch3':{
+        
+    },
+
+    'ch4':{
+        
+    },
+
+    'ch5':{
+        
+    },
+
+    'ch6':{
+        
+    },  
+
+    'ch7':{
+        
+    },      
+
+    'ch8':{
+        
+    },
+
+    'ch9':{
+        
+    },
+
+    'ch10':{
+        
+    },  
+
+    'ch11':{
+        
+    },  
+
+    'ch12':{
+        
+    },
+
+    'ch13':{
+        
+    },
+
+    'ch14':{
+        
+    },  
+
+    'ch15':{
+        
+    },  
 }
 
 phrases = {
@@ -306,4 +410,48 @@ phrases = {
         'How are you? (formal, in-, either)':'Come sta?, Come stai?, Come va?'
         "I'm very good, good, not bad, bad.":"Sto benissimo, Sto bene, Non c'è male, Sto male",
     },    
+
+    'ch5':{
+        
+    },
+
+    'ch6':{
+        
+    },  
+
+    'ch7':{
+        
+    },      
+
+    'ch8':{
+        
+    },
+
+    'ch9':{
+        
+    },
+
+    'ch10':{
+        
+    },  
+
+    'ch11':{
+        
+    },  
+
+    'ch12':{
+        
+    },
+
+    'ch13':{
+        
+    },
+
+    'ch14':{
+        
+    },  
+
+    'ch15':{
+        
+    },  
 }
