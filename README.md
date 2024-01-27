@@ -5,6 +5,10 @@
 # memoria
 A simple GUI to generate flashcards for memorizing vocabulary, grammar and phrases of a foreign language. Currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin) -- just add new dictionaries with the English and foreign language counterparts, and update a few hyperlinks.
 
+Install
+-------
+`pip install memoria-gui`
+
 Using _memoria_
 ---------------
 `python gui.py` from the terminal produces a GUI with which you choose: 
