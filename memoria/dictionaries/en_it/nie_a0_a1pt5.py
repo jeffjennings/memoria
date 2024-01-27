@@ -74,7 +74,17 @@ vocab = {
         'man':'uomo',
         'feminine':'femminile',
         'masculine':'maschile',
-
+        'please (2 forms)':'per favore, per cortesia',
+        'nice':'bello',
+        'name, surname':'nome, cognome',
+        'goodbye (formal)':'arrivederci',
+        'alphabet':'alfabeto',
+        'word/letter':'parola',
+        'example':'esempio',
+        'number':'numero',
+        'period, hypen, underscore, @':'punto, trattino, trattino basso, chiocciola',
+        'address':'indirizzo',
+        'friend':'amico',
         },
     'ch2':{
         
