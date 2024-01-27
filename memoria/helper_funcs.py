@@ -91,7 +91,7 @@ def update_card(card, entry, source_dict, entry_language='English'):
         english_entry = translation
 
     if card['underline'] == 0:
-        if english_entry.startswith('to '):
+        if english_entry.startswith(('to ', 'To ')):
             reference_type = 'conjugate'
         elif " " in entry:
             reference_type = 'hear'
