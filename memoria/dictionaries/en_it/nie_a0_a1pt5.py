@@ -464,6 +464,7 @@ vocab = {
         'to tidy up the room':'mettere in ordine la stanza',
         'to take the bus':"prendere l'autobus",
         'to listen to the latest news':'sentire le ultime notizie',
+        "storm, rain, sun":"temporale (m.), pioggia, sole (m.)",        
     },      
 
     'ch8':{
@@ -610,9 +611,9 @@ phrases = {
         "How long does it take by train?":"Quanto tempo ci vuole con in treno?",
         "It takes one hour.":"Ci vuole un'ora.",
         "What's the weather like?":"Che tempo fa?",
-        "It's hot (cold, windy, raining, snowing).":"Fa caldo (fa freddo, C'è vento., Piove., Nevica.)",
+        "It's hot (cold, windy, raining, snowing, sunny).":"Fa caldo (fa freddo, C'è vento., Piove., Nevica. C'è il sole.)",
         "The weather is nice (bad)":"Fa bel (brutto) tempo.",
-        "storm, rain, sun":"temporale (m.), pioggia, sole (m.)",
+        "What did you do yesterday morning?":"Che cosa hai fatto ieri mattina?"
     },      
 
     'ch8':{
