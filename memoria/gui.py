@@ -6,7 +6,7 @@ import random
 
 from memoria.inputs import books, card_types, languages
 from memoria.helper_funcs import get_dictionary, update_card, colors
-    
+
 def selection_gui(books, card_types, languages):
     """Create a GUI with options to select a book from which to 
     generate a given type of flaschards in a given language"""
@@ -59,13 +59,19 @@ def selection_gui(books, card_types, languages):
     type_lab = tk.Label(root, text="Show flashcards in:", fg=colors[4], font=base_font)
     type_lab.grid(row=3, column=0, padx=10, pady=10)   
     
+    randomize = tk.IntVar(root, value=1)
+    randomize_check = tk.Checkbutton(root, text="Randomize card order", variable=randomize, justify='right')
+    randomize_check.config(font=base_font, fg=colors[5], width=20, height=2) 
+    randomize_check.grid(row=4, column=1, padx=10, pady=10)
+
     selection_button = tk.Button(
         root,
         text="Generate flashcards",
         command=lambda: flashcard_gui(chosen_book.get(),
                                       chosen_chap.get(),
                                       chosen_type.get(), 
-                                      chosen_language.get()),
+                                      chosen_language.get(),
+                                      randomize.get()),
         font=base_font,
         width=30, # fix button width
         height=2,
@@ -74,7 +80,7 @@ def selection_gui(books, card_types, languages):
         fg=colors[3], # text color
         activeforeground=colors[4], # text color when selected
         )
-    selection_button.grid(row=4, column=1, padx=10, pady=10)
+    selection_button.grid(row=5, column=1, padx=10, pady=10)
 
     root.mainloop()
 
