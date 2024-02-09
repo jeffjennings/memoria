@@ -87,10 +87,11 @@ def selection_gui(books, card_types, languages):
     return root
 
 
-def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
+def flashcard_gui(book, chapter, card_type, card_language, randomize=1, nxy=5):
     """Create interactive GUIs displaying all available flashcards of
       from 'book' of 'card_type' in 'card_language', with each GUI 
-      displaying flashcards in an nxy x nxy grid"""
+      displaying flashcards in an nxy x nxy grid. If 'randomize', randomize the 
+      flashcard order."""
     
     # load dictionary from selected book and chapter(s)
     book_module = books[book]
@@ -102,8 +103,10 @@ def flashcard_gui(book, chapter, card_type, card_language, nxy=5):
     else:
         all_entry = list(source_dict.values())
     nentry = len(all_entry)
-    # randomize order (in-place)
-    random.shuffle(all_entry)
+    
+    if randomize == 1:
+        # randomize order (in-place)
+        random.shuffle(all_entry)
 
     windows = []    
     cards = []
