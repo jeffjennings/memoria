@@ -37,15 +37,15 @@ _memoria_ is currently tailored to Italian, but it's easy to drop in another lan
 Using _memoria_ for Italian
 ---------------------------
 For Italian specifically:
-- Clicking on a vocabulary flashcard a second time opens the [WordReference](https://www.wordreference.com/iten/) website with a search for the word to obtain its dictionary entry.
-- Clicking on a verb flashcard a second time opens the [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/) website with a search for the verb to obtain its conjugations in all tenses.
-- Clicking on other grammar or phrase flashcards a second time opens google translate with the Italian version of the entry, so that you can hear it spoken by clicking on the speaker icon there.
+- Click on a vocabulary flashcard a second time to open the [WordReference](https://www.wordreference.com/iten/) website with a search for the word's dictionary entry.
+- Click on a verb flashcard a second time to open the [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/) website with a search for the verb to show its conjugations in all tenses.
+- Click on other grammar or phrase flashcards a second time to open google translate with the Italian version of the entry, so that you can hear it spoken with the speaker icon there.
 - If you're interested in learning Italian, these are the books I'm using (and the source of flashcard entries in the code). Together I think they should provide a good teaching of [CEFR levels](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale) A1 - C2 of the language (i.e., from beginner to fluent), including a strong understanding of the grammar:
-   * _New Italian Espresso - Beginner and Pre-intermediate_ (CEFR levels A0 - A1.5) and _Intermediate and Advanced_ (CEFR levels A1.5 - B1) - these textbooks have companion workbooks that are great to reinforce the content of each textbook chapter
-   * _Nuovo Espresso 4, 5, 6_ (CEFR levels B2, C1, C2) - these books are only in Italian and are effectively a continuation of _New Italian Espresso_
+   * _New Italian Espresso - Beginner and Pre-intermediate_ (CEFR levels A0 - A1.5) and _Intermediate and Advanced_ (CEFR levels A1.5 - B1) - including the companion workbooks
+   * _Nuovo Espresso 4, 5, 6_ (CEFR levels B2, C1, C2) - these books are only in Italian and are a continuation of _New Italian Espresso_
    * _Italian Grammar in Practice_ (CEFR levels A1 - B2) - a large set of practice exercises, made by the same publisher of _New Italian Espresso_ and _Nuovo Espresso_
    * _English Grammar for Students of Italian_ - a quick read to recall the structure of English and a helpful comparison to differences in Italian
-   * _Pocket Italian Grammar_ - succinct overview of Italian grammar in a book small enough for your dog to consider it a toy and/or threat
+   * _Pocket Italian Grammar_ - succinct overview of Italian grammar
 
 Background
 ----------
