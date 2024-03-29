@@ -49,8 +49,8 @@ For Italian specifically:
 
 Background
 ----------
-I wrote this package to have an efficient way to memorize large sets of Italian words and phrases, and to see how to make GUIs in Python with `tkinter`. I've only been using Mac OS, so GUI formatting might be off on Linux or Windows. If you want to use and/or customize the code for your own language and you'd like some help, or if you have any suggestions, feel free to open an issue!
+I wrote this package to have an efficient way to memorize large sets of Italian words and phrases. I've only been using Mac OS, so GUI formatting might be off on Linux or Windows. If you want to use and/or customize the code for your own language and you'd like some help, or if you have any suggestions, feel free to open an issue.
 
 _memoria_ is Latin (and Italian!) for 'memory, remembrance'. Hence the Latin phrase 'In memoriam' and the English derivatives 'memorial' and 'memoir'.
 
-The logo is a Roman mosaic showing μνημοσύνη (Mnemosyne), the Greek Titan of memory _and_ mother of the nine Muses (baller). μνήμη	is Greek for 'memory, remembrance' and is the origin of the English derivative 'mnemonic'.
+The logo is a Roman mosaic showing μνημοσύνη (Mnemosyne), the Greek Titan of memory and mother of the nine Muses. μνήμη	is Greek for 'memory, remembrance' and is the origin of the English derivative 'mnemonic'.
