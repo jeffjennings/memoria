@@ -6,7 +6,7 @@ import memoria
 memoria_path = os.path.dirname(memoria.__file__)
 sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
 
-colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300', '#DAF7A6']
+colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300', '#DAF7A6', '#2EB0ED']
 
 def merge_dict(dict1, dict2):
     """Combine two dictionaries"""
@@ -104,5 +104,5 @@ def update_card(card, entry, source_dict, entry_language='English'):
     else:
         new_text = f"{card['text']}\n\n{translation}"
         # update button color once it's clicked
-        card.config(text=new_text, fg=colors[2], underline=0)
+        card.config(text=new_text, fg=colors[6], underline=0)
         

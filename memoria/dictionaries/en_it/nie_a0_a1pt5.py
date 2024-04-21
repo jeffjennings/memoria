@@ -79,7 +79,7 @@ vocab = {
         'name, surname':'nome, cognome',
         'goodbye (formal)':'arrivederci',
         'alphabet':'alfabeto',
-        'word/letter':'parola',
+        'word, letter':'parola, lettera',
         'example':'esempio',
         'number':'numero',
         'period, hypen, underscore, @':'punto, trattino, trattino basso, chiocciola',
