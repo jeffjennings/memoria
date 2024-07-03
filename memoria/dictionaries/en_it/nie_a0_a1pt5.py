@@ -76,7 +76,7 @@ vocab = {
         'masculine':'maschile',
         'please (2 forms)':'per favore, per cortesia',
         'nice':'bello',
-        'name, surname':'nome, cognome',
+        'name, surname':'nome (m.), cognome',
         'goodbye (formal)':'arrivederci',
         'alphabet':'alfabeto',
         'word, letter':'parola, lettera',
