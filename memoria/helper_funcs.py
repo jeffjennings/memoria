@@ -75,30 +75,11 @@ def translate(entry, source_dict, entry_language="English"):
     return translation
 
 
-def look_up_entry(entry, source_dict, reference_type, entry_language="Italian"):
-    """Depending on 'reference_type', look up online the definition of a foreign
-    language word or phrase 'entry', its conjugation, or show the foreign language
-    form (as we provide in the `dictionaries` folder) on google translate to hear
-    it spoken."""
+def look_up_entry(entry, source_dict, entry_language="Italian"):
+    """Look up the definition of a foreign language word online."""
 
-    if reference_type == "define":
-        if entry_language == "Italian":
-            link = f"https://www.wordreference.com/iten/{entry}"
-    elif reference_type == "conjugate":
-        if entry_language == "Italian":
-            link = f"https://sapere.virgilio.it/parole/coniuga-verbi/{entry}"
-    else:
-        link = "https://translate.google.com/?sl=it&tl=en&text="
-
-        # for web address, must replace whitespace in 'entry'
-        entry_no_spaces = entry.replace(" ", "%20")
-
-        if entry_language == "English":
-            # don't want to call google translate on an English word/phrase,
-            # as its translation may differ from our stored one
-            entry_no_spaces = translate(entry, source_dict, entry_language)
-
-        link += f"{entry_no_spaces}%0A&op=translate"
+    if entry_language == "Italian":
+        link = f"https://www.wordreference.com/iten/{entry}"
 
     webbrowser.open(link, new=2)
 
@@ -110,25 +91,15 @@ def update_card(card, entry, source_dict, entry_language="English"):
     translation = translate(entry, source_dict, entry_language)
 
     if entry_language == "English":
-        english_entry = entry
         foreign_entry = translation
     else:
         foreign_entry = entry
-        english_entry = translation
 
     if card["underline"] == 0:
-        if english_entry.startswith(("to ", "To ")):
-            reference_type = "conjugate"
-        elif " " in entry:
-            reference_type = "hear"
-        else:
-            reference_type = "define"
-
         if "Italian" in languages:
             look_up_entry(
                 foreign_entry,
                 source_dict,
-                reference_type,
                 entry_language="Italian",
             )
 
