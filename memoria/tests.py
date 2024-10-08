@@ -6,7 +6,7 @@ from memoria.gui import selection_gui, flashcard_gui
 
 book = 'nie_a0_a1pt5'
 chapter = '1'
-card_type = 'Vocabulary'
+card_type = 'Vocab: nouns, adjectives, verbs'
 card_language=['English', 'Italian']
 
 def test_get_dict():
@@ -22,7 +22,7 @@ def test_translate():
 def test_look_up_entry():
     """Test that we can look up an entry in a dictionary"""
     source_dict = get_dictionary(book, chapter, card_type)
-    look_up_entry('essere', source_dict, 'define', 'Italian')
+    look_up_entry('essere', source_dict, 'Italian')
 
 def test_generate_selection_gui():
     """Test that the selection GUI launches"""
