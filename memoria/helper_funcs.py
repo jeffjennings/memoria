@@ -22,16 +22,23 @@ def get_dictionary(book, chapter, card_type):
             from nie_a0_a1pt5 import phrases as chosen_dict
 
     all_entries = {}
-    if chapter == 'all':
-        for cc in chosen_dict:
-            all_entries = merge_dict(all_entries, chosen_dict[cc])
-
-    else:
-        # format strings
-        chapter = chapter.replace(",", " ")   
-        chapter = chapter.split()
+    if chapter != "all":
+        chapter = chapter.split(",")
+        selected_chapters = {}
         for cc in chapter:
-            all_entries = merge_dict(all_entries, chosen_dict['ch' + cc])
+            selected_chapters[cc] = chosen_dict['ch' + cc]
+        chosen_dict = selected_chapters
+
+    for chap in chosen_dict:
+        if card_type == "Vocab: nouns, adjectives, verbs":                    
+            for vv in ["nouns", "adjectives", "verbs"]:
+                # merge dictionaries
+                all_entries = {**all_entries, **chosen_dict[chap][vv]}
+
+        elif card_type == "Vocab: adverbs, conjunctions, prepositions, pronouns":            
+            for vv in ["adverbs", "conjunctions", "prepositions", "pronouns"]:
+                all_entries = {**all_entries, **chosen_dict[chap][vv]}
+                
 
     return all_entries
 
