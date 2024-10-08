@@ -64,7 +64,7 @@ vocab = {
             "period": "punto",
             "hyphen": "trattino",
             "underscore": "trattino basso",
-            "@ symbol": "chicciola",
+            "@ symbol": "chiocciola",
             "address": "indirizzo",
             "friend": "amico",
         },
