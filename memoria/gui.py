@@ -4,8 +4,8 @@ from tkinter import font, Tk
 import random 
 # random.seed(47)
 
-from memoria.inputs import books, card_types, languages
-from memoria.helper_funcs import get_dictionary, update_card, colors
+from memoria.inputs import languages, card_types, books, colors
+from memoria.helper_funcs import get_dictionary, update_card
 
 def selection_gui(books, card_types, languages):
     """Create a GUI with options to select a book from which to 
@@ -32,14 +32,14 @@ def selection_gui(books, card_types, languages):
     chap_entry.config(font=base_font, fg=colors[1], width=30)
 
     chap_lab = tk.Label(root, 
-                        text="Chapters\n('all' or comma-separated, e.g. '1, 2'):", 
+                        text="Chapters\n('all' or comma-separated, e.g. '1,2'):", 
                         fg=colors[1], 
                         font=base_font,
                         )
     chap_entry.grid(row=1, column=1, padx=10, pady=10)
     chap_lab.grid(row=1, column=0, padx=10, pady=10)
 
-    # flashcard type (vocab, grammar, phrases)
+    # flashcard type
     chosen_type = tk.StringVar(root, value=card_types[0])
 
     type_dropdown = tk.OptionMenu(root, chosen_type, *card_types)
