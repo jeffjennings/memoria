@@ -39,6 +39,26 @@ def get_dictionary(book, chapter, card_type):
             for vv in ["adverbs", "conjunctions", "prepositions", "pronouns"]:
                 all_entries = {**all_entries, **chosen_dict[chap][vv]}
                 
+        elif card_type == "Randomly generated phrases":
+            for ii in range(50):
+                # _for is foreign language
+                rp_eng, rp_for = random.choice(list(person.items()))
+                rt_eng, rt_for = random.choice(list(tense.items()))
+                rv_eng, rv_for = random.choice(list(chosen_dict[chap]['verbs'].items()))
+
+                phrase_eng = f"{rp_eng} {rv_eng} ({rt_eng})"
+                phrase_for = f"{rp_for} {rv_for} ({rt_for})"
+                all_entries[phrase_eng] = phrase_for
+
+            for ii in range(50):
+                ra_eng, ra_for = random.choice(list(chosen_dict[chap]['adjectives'].items()))
+                rn_eng, rn_for = random.choice(list(chosen_dict[chap]['nouns'].items()))
+                phrase_eng = f"{ra_eng} {rn_eng}"
+                phrase_for = f"{ra_for} {rn_for}"
+                all_entries[phrase_eng] = phrase_for
+
+        else:
+            all_entries = {**all_entries, **chosen_dict[chap]}
 
     return all_entries
 
