@@ -27,20 +27,16 @@ Using _memoria_
 `python gui.py` from the terminal produces a GUI with which you choose: 
 - a book to draw flashcard entries from,
 - which chapter(s) in the book to draw from,
-- which type of entry to draw (vocabulary, grammar or phrases), and
+- which type of entry to draw (vocabulary among nouns, adjectives, verbs; vocabulary among adverbs, conjunctions, prepositions, pronouns; grammar; phrases; or randomly generated phrases), and
 - in which language to display the entries on the flashcards (English or the foreign language).
 
-Grids of flashcards are then generated, spanning all the entries of the chosen type from the chosen source, with the order optionally randomized. Clicking on a flashcard once shows its English/foreign language counterpart (or in the case of grammar, the relevant forms). 
+Grids of flashcards are then generated, spanning all the entries of the chosen type from the chosen source, with the order optionally randomized. Clicking on a flashcard once shows its English/foreign language counterpart (or in the case of grammar, the relevant forms). Clicking on it again links to its translation online (for Italian, this uses [WordReference](https://www.wordreference.com/iten/)).
 
 _memoria_ is currently tailored to Italian, but it's easy to drop in another language (it might eventually support Ancient Greek and Latin) - just add new [dictionaries](https://github.com/jeffjennings/memoria/tree/main/memoria/dictionaries) with the English and foreign language counterparts, following the data structure [here](https://github.com/jeffjennings/memoria/blob/main/memoria/dictionaries/en_it/nie_a0_a1pt5.py).
 
-Using _memoria_ for Italian
----------------------------
-For Italian specifically:
-- Click on a vocabulary flashcard a second time to open the [WordReference](https://www.wordreference.com/iten/) website with a search for the word's dictionary entry.
-- Click on a verb flashcard a second time to open the [Virgilio](https://sapere.virgilio.it/parole/coniuga-verbi/) website with a search for the verb to show its conjugations in all tenses.
-- Click on other grammar or phrase flashcards a second time to open google translate with the Italian version of the entry, so that you can hear it spoken with the speaker icon there.
-- If you're interested in learning Italian, these are the books I'm using (and the source of flashcard entries in the code). Together I think they should provide a good teaching of [CEFR levels](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale) A1 - C2 of the language (i.e., from beginner to fluent), including a strong understanding of the grammar:
+Resources for learning Italian
+------------------------------
+If you're interested in learning Italian, these are the books I'm using (and the source of flashcard entries in the code). Together I think they should provide a good teaching of [CEFR levels](https://www.coe.int/en/web/common-european-framework-reference-languages/table-1-cefr-3.3-common-reference-levels-global-scale) A1 - C2 of the language (i.e., from beginner to fluent), including a strong understanding of the grammar:
    * _New Italian Espresso - Beginner and Pre-intermediate_ (CEFR levels A0 - A1.5) and _Intermediate and Advanced_ (CEFR levels A1.5 - B1) - including the companion workbooks
    * _Nuovo Espresso 4, 5, 6_ (CEFR levels B2, C1, C2) - these books are only in Italian and are a continuation of _New Italian Espresso_
    * _Italian Grammar in Practice_ (CEFR levels A1 - B2) - a large set of practice exercises, made by the same publisher of _New Italian Espresso_ and _Nuovo Espresso_
