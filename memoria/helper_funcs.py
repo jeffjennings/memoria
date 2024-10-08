@@ -1,23 +1,22 @@
 import os
 import sys
 import webbrowser
-from memoria.inputs import languages
+import random
 import memoria
+from memoria.inputs import languages, person, tense, colors
+
 memoria_path = os.path.dirname(memoria.__file__)
 sys.path.append(os.path.join(memoria_path, f"dictionaries/en_it"))
-
-colors = ['#900C3F', '#C70039', '#FF5733', '#17BF14', '#FFC300', '#DAF7A6', '#2EB0ED']
-
-def merge_dict(dict1, dict2):
-    """Combine two dictionaries"""
-    return {**dict1, **dict2}
 
 def get_dictionary(book, chapter, card_type):
     """Load the selected dictionary"""
     if book == "nie_a0_a1pt5":
-        if card_type == 'Vocabulary':
+        if card_type in [
+            "Vocab: nouns, adjectives, verbs", 
+            "Vocab: adverbs, conjunctions, prepositions, pronouns",
+            "Randomly generated phrases"]:
             from nie_a0_a1pt5 import vocab as chosen_dict
-        elif card_type == 'Grammar':
+        elif card_type == "Grammar":
             from nie_a0_a1pt5 import grammar as chosen_dict
         else:
             from nie_a0_a1pt5 import phrases as chosen_dict
