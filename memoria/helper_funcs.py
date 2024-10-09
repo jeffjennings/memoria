@@ -14,7 +14,8 @@ def get_dictionary(book, chapter, card_type):
         if card_type in [
             "Vocab: nouns, adjectives, verbs", 
             "Vocab: adverbs, conjunctions, prepositions, pronouns",
-            "Randomly generated phrases"]:
+            "Randomly generated conjugations",
+            "Randomly generated adjective + noun"]:
             from nie_a0_a1pt5 import vocab as chosen_dict
         elif card_type == "Grammar":
             from nie_a0_a1pt5 import grammar as chosen_dict
@@ -39,17 +40,19 @@ def get_dictionary(book, chapter, card_type):
             for vv in ["adverbs", "conjunctions", "prepositions", "pronouns"]:
                 all_entries = {**all_entries, **chosen_dict[chap][vv]}
                 
-        elif card_type == "Randomly generated phrases":
+        elif card_type == "Randomly generated conjugations":
             for ii in range(50):
                 # _for is foreign language
                 rp_eng, rp_for = random.choice(list(person.items()))
                 rt_eng, rt_for = random.choice(list(tense.items()))
                 rv_eng, rv_for = random.choice(list(chosen_dict[chap]['verbs'].items()))
 
-                phrase_eng = f"{rp_eng} {rv_eng} ({rt_eng})"
-                phrase_for = f"{rp_for} {rv_for} ({rt_for})"
+                # remove "to " from English
+                phrase_eng = f"{rp_eng} {rv_eng[3:]}\n({rt_eng})"
+                phrase_for = f"{rp_for} {rv_for}\n({rt_for})"
                 all_entries[phrase_eng] = phrase_for
 
+        elif card_type == "Randomly generated adjective + noun":
             for ii in range(50):
                 ra_eng, ra_for = random.choice(list(chosen_dict[chap]['adjectives'].items()))
                 rn_eng, rn_for = random.choice(list(chosen_dict[chap]['nouns'].items()))

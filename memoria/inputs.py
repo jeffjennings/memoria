@@ -8,7 +8,8 @@ card_types = ["Vocab: nouns, adjectives, verbs",
               "Vocab: adverbs, conjunctions, prepositions, pronouns",
               "Grammar", 
               "Phrases", 
-              "Randomly generated phrases",
+              "Randomly generated conjugations",
+              "Randomly generated adjective + noun",
               ]
 
 # language books containing entries for each of the 'card_types',
