@@ -220,7 +220,7 @@ vocab = {
             "post office": "ufficio postale",
             "auto repair shop": "officina",
             "agency": "agenzia",
-            "photography": "fotografia",
+            "photography/photograph": "fotografia",
             "shop": "negozio",
             "factory": "fabbrica",
             "pharmacy": "farmacia",
@@ -383,7 +383,7 @@ vocab = {
         "pronouns": {
             "who": "chi",
             "what": "che",
-            "which (m., f., .plural)": "quale, quale, quali",
+            "which (m., f., plural)": "quale, quale, quali",
         },
         "conjunctions": {
             "if": "se",
@@ -525,7 +525,7 @@ vocab = {
             "spring [season]": "primavera",
             "summer": "estate (f.)",
             "fall [season]": "autonno",
-            "winter": "invero",
+            "winter": "inverno",
             "yesterday": "ieri",
             "today": "oggi",
             "tomorrow": "domani",
