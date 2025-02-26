@@ -596,6 +596,8 @@ vocab = {
             "different": "diverso",   
             "too much": "troppo",
             "daily": "giornaliero",
+            "better": "meglio",
+            "worse": "peggio",
         },
         "verbs": {
             "to take a swim/a bath": "fare il bagno",
@@ -620,7 +622,7 @@ vocab = {
             "to die (inf., irr. past participle)": "morire, sono morto",
             "to be born (inf., irr. past participle)": "nascere, sono nato",              
             "to descend (inf., irr. past participle)": "scendere, sono sceso",      
-            "to happen/occur (inf., irr. past participle)": "succedere, sono successo",
+            "to happen/occur (inf., irr. past participle)": "succedere, è successo",
             "to like (inf., irr. past participle)": "piacere, sono piaciuto",            
             "to arrive [the form w/ irr. past participle] (inf., irr. past participle)": "venire, sono venuto",
             "to open (inf., irr. past participle)": "aprire, ho aperto",
